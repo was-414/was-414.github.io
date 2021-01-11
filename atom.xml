@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="https://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
+  <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
   
-  <link href="https://hai-chao.gitee.io/blog/"/>
+  <link href="http://hai-chao.gitee.io/blog/"/>
   <updated>2021-01-10T14:39:23.276Z</updated>
-  <id>https://hai-chao.gitee.io/blog/</id>
+  <id>http://hai-chao.gitee.io/blog/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://hai-chao.gitee.io/blog/2021/01/10/hello-world/"/>
-    <id>https://hai-chao.gitee.io/blog/2021/01/10/hello-world/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/01/10/hello-world/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/01/10/hello-world/</id>
     <published>2021-01-10T14:39:23.276Z</published>
     <updated>2021-01-10T14:39:23.276Z</updated>
     
