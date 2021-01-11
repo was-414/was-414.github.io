@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>塔纳托斯</title>
   
   
   <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://hai-chao.gitee.io/blog/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>塔纳托斯</name>
     
   </author>
   
