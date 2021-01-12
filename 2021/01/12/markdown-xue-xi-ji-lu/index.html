@@ -345,9 +345,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">学习</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -368,7 +372,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    448
+                    441
                 </div>
                 
 
@@ -397,45 +401,44 @@
             <div id="articleContent">
                 <p>Markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。Markdown编写的文档的后缀名为<code>.md</code>。下面我将记录Markdown的常用语法。</p>
 <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>用#来表示1~6级标题，几级标题对应有几个#号，例如:</p>
-<pre><code># 一级标题
+<pre class=" language-java"><code class="language-java"># 一级标题
 ### 三级标题</code></pre>
 <p>注意事项:#号后面要加一个<strong>空格</strong>。</p>
 <h2 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式"></a>段落格式</h2><p><strong>换行</strong><br>两个空格加一个回车。<br><strong>分割线</strong><br>三个及三个以上的减号（-）号。<br><strong>删除线</strong></p>
-<pre><code>~~删除的内容~~</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token operator">~</span><span class="token operator">~</span>删除的内容<span class="token operator">~</span><span class="token operator">~</span></code></pre>
 <p><strong>下划线</strong></p>
-<pre><code>&lt;u&gt;加下划线的内容&lt;/u&gt;</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>u<span class="token operator">></span>加下划线的内容<span class="token operator">&lt;</span><span class="token operator">/</span>u<span class="token operator">></span></code></pre>
 <p><strong>脚注</strong></p>
-<pre><code>内容[^test]
-[^text]:内容的意思</code></pre>
+<pre class=" language-java"><code class="language-java">内容<span class="token punctuation">[</span><span class="token operator">^</span>test<span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token operator">^</span>text<span class="token punctuation">]</span><span class="token operator">:</span>内容的意思</code></pre>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p><strong>无序列表</strong><br>用星号(<code>*</code>)、加号(<code>+</code>)或是减号(<code>-</code>)作为列表标记，后面加一个<strong>空格</strong>。<br><strong>有序列表</strong><br>数字1加一个点（.）。<br><strong>列表嵌套</strong><br>子列表前加4个空格。</p>
 <h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p><code>&gt;</code>加一个空格。</p>
-<pre><code>&gt; 区块引用
-&gt; 今天天气真好！</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token operator">></span> 区块引用
+<span class="token operator">></span> 今天天气真好！</code></pre>
 <h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p><strong>`代码`</strong><br><strong>```<br>代码段<br>```</strong></p>
 <h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>用法如下:</p>
-<pre><code>用法一:
-[链接名称](链接地址)  或  &lt;链接地址&gt;
-用法二:
+<pre class=" language-java"><code class="language-java">用法一<span class="token operator">:</span>
+<span class="token punctuation">[</span>链接名称<span class="token punctuation">]</span><span class="token punctuation">(</span>链接地址<span class="token punctuation">)</span>  或  <span class="token operator">&lt;</span>链接地址<span class="token operator">></span>
+用法二<span class="token operator">:</span>
 通过变量来设置一个链接，变量赋值在文档末尾进行
-这个链接用 1 作为网址变量 [Google][1]
-这个链接用 runoob 作为网址变量 [Runoob][runoob]
+这个链接用 <span class="token number">1</span> 作为网址变量 <span class="token punctuation">[</span>Google<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+这个链接用 runoob 作为网址变量 <span class="token punctuation">[</span>Runoob<span class="token punctuation">]</span><span class="token punctuation">[</span>runoob<span class="token punctuation">]</span>
 然后在文档的结尾为变量赋值（网址）
-  [1]: http://www.google.com/
-  [runoob]: http://www.runoob.com/</code></pre>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><pre><code>![alt 属性文本](图片地址)
+  <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">:</span> http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>google<span class="token punctuation">.</span>com<span class="token operator">/</span>
+  <span class="token punctuation">[</span>runoob<span class="token punctuation">]</span><span class="token operator">:</span> http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>runoob<span class="token punctuation">.</span>com<span class="token operator">/</span></code></pre>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><pre class=" language-java"><code class="language-java"><span class="token operator">!</span><span class="token punctuation">[</span>alt 属性文本<span class="token punctuation">]</span><span class="token punctuation">(</span>图片地址<span class="token punctuation">)</span>
 
-![alt 属性文本](图片地址 &quot;可选标题&quot;)</code></pre>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre><code>|  表头   | 表头  |
-|  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |</code></pre>
+<span class="token operator">!</span><span class="token punctuation">[</span>alt 属性文本<span class="token punctuation">]</span><span class="token punctuation">(</span>图片地址 <span class="token string">"可选标题"</span><span class="token punctuation">)</span></code></pre>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre class=" language-java"><code class="language-java"><span class="token operator">|</span>  表头   <span class="token operator">|</span> 表头  <span class="token operator">|</span>
+<span class="token operator">|</span>  <span class="token operator">--</span><span class="token operator">--</span>  <span class="token operator">|</span> <span class="token operator">--</span><span class="token operator">--</span>  <span class="token operator">|</span>
+<span class="token operator">|</span> 单元格  <span class="token operator">|</span> 单元格 <span class="token operator">|</span>
+<span class="token operator">|</span> 单元格  <span class="token operator">|</span> 单元格 <span class="token operator">|</span></code></pre>
 <p>说明:可以设置表格的对齐方式</p>
-<pre><code>| 左对齐 | 右对齐 | 居中对齐 |
-| :-----| ----: | :----: |
-| 单元格 | 单元格 | 单元格 |
-| 单元格 | 单元格 | 单元格 |</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token operator">|</span> 左对齐 <span class="token operator">|</span> 右对齐 <span class="token operator">|</span> 居中对齐 <span class="token operator">|</span>
+<span class="token operator">|</span> <span class="token operator">:</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span><span class="token operator">|</span> <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">:</span> <span class="token operator">|</span> <span class="token operator">:</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">:</span> <span class="token operator">|</span>
+<span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span>
+<span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span></code></pre>
 <p><code>:-</code>表示左对齐，<code>:-:</code>表示居中对齐,<code>:-</code>表示右对齐。</p>
-<hr>
 
                 
             </div>
@@ -499,7 +502,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">学习</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -701,6 +708,14 @@
                 </div>
 
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -738,6 +753,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -920,7 +943,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">448</span>&nbsp;字
+                class="white-color">441</span>&nbsp;字
             
             
             
