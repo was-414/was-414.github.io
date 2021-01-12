@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>塔纳托斯</title>
+  
+  <subtitle>塔纳托斯</subtitle>
+  <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
+  
+  <link href="http://hai-chao.gitee.io/blog/"/>
+  <updated>2021-01-12T06:01:54.735Z</updated>
+  <id>http://hai-chao.gitee.io/blog/</id>
+  
+  <author>
+    <name>塔纳托斯</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一篇博客</title>
+    <link href="http://hai-chao.gitee.io/blog/2021/01/12/di-yi-pian-bo-ke/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/01/12/di-yi-pian-bo-ke/</id>
+    <published>2021-01-12T01:25:00.000Z</published>
+    <updated>2021-01-12T06:01:54.735Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>
