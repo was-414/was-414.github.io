@@ -6,7 +6,7 @@
   <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
   
   <link href="http://hai-chao.gitee.io/blog/"/>
-  <updated>2021-01-12T06:01:54.735Z</updated>
+  <updated>2021-01-12T13:15:55.405Z</updated>
   <id>http://hai-chao.gitee.io/blog/</id>
   
   <author>
@@ -17,12 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第一篇博客</title>
-    <link href="http://hai-chao.gitee.io/blog/2021/01/12/di-yi-pian-bo-ke/"/>
-    <id>http://hai-chao.gitee.io/blog/2021/01/12/di-yi-pian-bo-ke/</id>
-    <published>2021-01-12T01:25:00.000Z</published>
-    <updated>2021-01-12T06:01:54.735Z</updated>
+    <title>Markdown学习记录</title>
+    <link href="http://hai-chao.gitee.io/blog/2021/01/12/markdown-xue-xi-ji-lu/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/01/12/markdown-xue-xi-ji-lu/</id>
+    <published>2021-01-12T11:30:55.000Z</published>
+    <updated>2021-01-12T13:15:55.405Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。Markdown编写的文档的后缀名为&lt;code&gt;.md&lt;/code&gt;。下面我将记录Markdown的常用语法。&lt;/p&gt;
+&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot;</summary>
+        
+      
     
     
     
