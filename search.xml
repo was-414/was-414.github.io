@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>音频驱动失效(代码19)</title>
+      <link href="/blog/2021/01/24/yin-pin-qu-dong-shi-xiao-dai-ma-19/"/>
+      <url>/blog/2021/01/24/yin-pin-qu-dong-shi-xiao-dai-ma-19/</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在个别情况下，比如说使用CamtasiaStudio软件后没给予权限，使得电脑没有声音，并在设备管理器中提示：</p><p>“由于其配置信息(注册表中的)不完整或已损坏，Windows 无法启动这个硬件设备。 (代码 19)。”</p><img src="https://exp-picture.cdn.bcebos.com/3c42a5ea3e86304807178b61c33104ebf7a752e9.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80"><p>对于这种问题，该如何解决呢？</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h4 id="重置系统"><a href="#重置系统" class="headerlink" title="重置系统"></a>重置系统</h4><p>这是最简单粗暴的办法，俗话说的好，大部分的电脑问题靠重启就可以解决，解决不了的靠重置系统，要是重置系统都解决不了，还有一个最终手段，新买一台电脑。</p><p>步骤：1、打开设置并点击更新和安全。</p><p><img src="https://s3.jpg.cm/2021/01/24/o94zH.png" alt="o94zH.png"></p><p>2、点击恢复。</p><p><img src="https://s3.jpg.cm/2021/01/24/o9fIL.png" alt="o9fIL.png"></p><p>3、点击开始。</p><p><img src="https://s3.jpg.cm/2021/01/24/o9gcf.png" alt="o9gcf.png"></p><p>4、按照自己的需求点击。</p><p><img src="https://s3.jpg.cm/2021/01/24/o9oJ2.png" alt="o9oJ2.png"></p><h4 id="注册表方式"><a href="#注册表方式" class="headerlink" title="注册表方式"></a>注册表方式</h4><p>1、按下windows键+R键，输入regedit，打开注册表编辑器。</p><img src="https://exp-picture.cdn.bcebos.com/5e4e9c2b74ee1c32244c0d9907f1d8a727334be9.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1%2Fformat%2Cf_jpg%2Fquality%2Cq_80"><p>2、在注册表中定位到：</p><p>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class{4d36e96c-e325-11ce-bfc1-08002be10318}</p><p><strong>解释一下{4d36e96c-e325-11ce-bfc1-08002be10318}为出问题设备的类 Guid的值。</strong></p><p><img src="https://s3.jpg.cm/2021/01/24/o90iO.png" alt="o90iO.png"></p><p><strong><em>注意：这一类有很多，不要找错了，检查右侧class项是否为MEDIA\</em></strong></p><p><img src="https://exp-picture.cdn.bcebos.com/d9e638334884cde33d780a5bf07f860e7d7542e9.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80"></p><p>3、双击UpperFilters项，删除其中的内容。</p><p><img src="https://exp-picture.cdn.bcebos.com/874f6275e5f4fcf59359667b21d7726b0de2bde9.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80"></p><p>4、确保UpperFilters项数值为空后，关闭注册表编辑器。</p><p><img src="https://exp-picture.cdn.bcebos.com/3b8fb4d7726b0ce2e7b368baef781423bfb9b6e9.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80"></p><p>5、计算机→右键→管理</p><p><img src="https://exp-picture.cdn.bcebos.com/354e7a781423beb9f16a7d7730d6e1d06ce8b3e9.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80"></p><p>6、在设备管理器中，找到音频设备，右键→禁用</p><p><img src="https://exp-picture.cdn.bcebos.com/bff8683e21c2bbd66b84315d116186254093aee9.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80"></p><p>7、禁用后再启用。即手动重启该设备。然后就可以正常启用设备了。如果不能立即生效记得重启电脑。</p><p><img src="https://exp-picture.cdn.bcebos.com/6ca984618625419341bcecb1df1bd10ff326abe9.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80"></p><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><p>最后，我说一下我遇到这个问题的解决思路。我遇到这个问题2次了，第一次我搜索无果后，就直接重置系统，简单粗暴。在今天我又遇到了这个问题，因在家无聊，就在互联网上找了很久，并逐一实践，最终找到了解决办法。因此，当遇到问题时，善用搜索引擎，能够解决大部分的问题，当然，主要还是你得实践，毕竟实践出真知。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java notes</title>
       <link href="/blog/2021/01/23/java-notes/"/>
       <url>/blog/2021/01/23/java-notes/</url>
