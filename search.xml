@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>Processing语言介绍</title>
+      <link href="/blog/2021/01/28/processing-yu-yan-jie-shao/"/>
+      <url>/blog/2021/01/28/processing-yu-yan-jie-shao/</url>
+      
+        <content type="html"><![CDATA[<p>最近了解到了一门语言，名叫Processing，这是一个开放原始码的程序语言及开发环境，提供给那些想要对<strong>影像和动画及声音</strong>进行程序编辑的工作者。此外，学生、艺术家、设计师、建筑师、研究员以及有兴趣的人，也可以用来学习，开发原型及制作。简单来说，Processing可以称作为一门画画的编程语言，面向的人群为艺术家和设计师。</p><h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><strong>链接：</strong><a href="https://processing.org/">https://processing.org/</a></p><p>点击链接，点击Download Processing跳转，选择合适的版本下载，及下及用，不需要配置烦人的开发环境。</p><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Processing 是用 <strong>Java</strong> 编程语言写的，所以 Processing 应用程序是翻译成 Java 代码执行，基于java特性，Processing<strong>多平台支持</strong>。同时，这门语言对新手友好，这一点来源于其<strong>图形交户</strong>，如果您熟悉 C 或 Java 语言，Processing 将很容易学。简单来说，Processing 就是 Java + 一些库。</p><p>那么，Processing主要的应用场景，及Processing能干吗？</p><ul><li><p>生成艺术</p></li><li><p>2D游戏</p></li><li><p>交互式物理系统</p></li><li><p>数据可视化</p></li><li><p>UI</p></li><li><p>大热的计算机视觉和machine learning （通过Open-CV）</p></li><li><p>声音可视化 （外接MIDI做音乐）</p></li></ul><p>以下是Processing的作品。</p><p><img src="http://iprocessing.cn/wp-content/uploads/2020/09/gif-2.gif"></p><p><img src="https://mc.dfrobot.com.cn/data/attachment/forum/201701/03/125214m2d9n284z828iooz.gif"><br><img src="https://mc.dfrobot.com.cn/data/attachment/forum/201701/03/125241a7hhk33321kd8n1u.gif"><br>最后，介绍一个交流Processing的网站。</p><p>网站名：Processing编程艺术，链接：<a href="http://iprocessing.cn/">http://iprocessing.cn/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>对波士顿机器人の观后感</title>
+      <link href="/blog/2021/01/26/dui-bo-shi-dun-ji-qi-ren-noguan-hou-gan/"/>
+      <url>/blog/2021/01/26/dui-bo-shi-dun-ji-qi-ren-noguan-hou-gan/</url>
+      
+        <content type="html"><![CDATA[<p> 前一段时间，我看了一个关于机器人的视频，观后直呼NB。</p><h2 id="视频链接"><a href="#视频链接" class="headerlink" title="视频链接"></a>视频链接</h2><p><strong>观看地址:</strong> <a href="https://www.bilibili.com/video/BV1nz4y1r7vt">https://www.bilibili.com/video/BV1nz4y1r7vt</a></p><p>网站：B站                UP主：柚子木字幕组</p><p>在B站看了一圈，这个链接下的视频完整并且评论区讨论和谐（<del>点都不像隔壁观网的评论区</del>）。</p><h2 id="观后感"><a href="#观后感" class="headerlink" title="观后感"></a>观后感</h2><p>很早以前对于波士顿的机器人我看过一个在地上跑步的视频，当时并没觉得那么震撼，而这个视频我看后感到深深的震惊，怎么说呢，动作太流畅了，据我考证，这个视频<strong>并非CG</strong>，而有个相关的恶搞视频是CG，其地址为：<a href="https://www.bilibili.com/video/BV1x4411V7oh">https://www.bilibili.com/video/BV1x4411V7oh?</a>，有些人没分清楚，就以为波士顿动力发的视频都是CG做的，我再强调一次，<strong>这个视频并非CG</strong>。那么，具体看完后，除了卧槽还是卧槽。总的来说，时间在流逝，科技在进步，这预示着未来的发展，就如同现在街上的汽车，人手一个的智能手机。期待的同时又对于新事物有些许恐惧，毕竟我这等佛系老人早已没了动力。最后，怎么说呢，期待未来越来越美好吧！<del>（那么，在我有生之年里能看到VR和人脑神经相结合的技术吗）</del></p><p><img src="https://img.maocdn.cn/img/2021/01/27/-1.jpg" alt="-1.jpg"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>音频驱动失效(代码19)</title>
       <link href="/blog/2021/01/24/yin-pin-qu-dong-shi-xiao-dai-ma-19/"/>
       <url>/blog/2021/01/24/yin-pin-qu-dong-shi-xiao-dai-ma-19/</url>
