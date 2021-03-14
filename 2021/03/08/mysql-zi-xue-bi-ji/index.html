@@ -786,7 +786,7 @@ using
 # 用来指定连接的字段（当两张表有同名字段时）
 select * from t1 inner join t3 using(id);
 # 实际上不常用自然连接和using，一般用inner join 进行内连接并写全代码</code></pre>
-<h2 id="子连接"><a href="#子连接" class="headerlink" title="子连接"></a>子连接</h2><pre class=" language-mysql"><code class="language-mysql">基本语法
+<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><pre class=" language-mysql"><code class="language-mysql">基本语法
 # 查询分数表中分数大于85分的学生在学生表中的所有信息
 select * from student where id in(select stuId from score where score>=85);
 # not in 取反  in 可理解为相同，等于
@@ -1028,18 +1028,17 @@ select * from student where exists(select stuId from score where score>=85);
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/blog/2021/03/08/mysql-zi-xue-bi-ji/">
+                <a href="/blog/2021/03/14/kou-tu-zhi-nan/">
                     <div class="card-image">
                         
                         
-                        <img src="/blog/medias/featureimages/2.jpg" class="responsive-img" alt="Mysql自学笔记">
+                        <img src="/blog/medias/featureimages/3.jpg" class="responsive-img" alt="扣图指南">
                         
-                        <span class="card-title">Mysql自学笔记</span>
+                        <span class="card-title">扣图指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1049,9 +1048,9 @@ select * from student where exists(select stuId from score where score>=85);
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1060,7 +1059,6 @@ select * from student where exists(select stuId from score where score>=85);
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1296,7 +1294,7 @@ select * from student where exists(select stuId from score where score>=85);
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.1k</span>&nbsp;字
+                class="white-color">16.5k</span>&nbsp;字
             
             
             
