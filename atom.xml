@@ -6,7 +6,7 @@
   <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
   
   <link href="http://hai-chao.gitee.io/blog/"/>
-  <updated>2021-03-15T14:00:06.037Z</updated>
+  <updated>2021-03-28T03:18:00.412Z</updated>
   <id>http://hai-chao.gitee.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>21Y3近况总结</title>
+    <link href="http://hai-chao.gitee.io/blog/2021/03/28/21y3-jin-kuang-zong-jie/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/03/28/21y3-jin-kuang-zong-jie/</id>
+    <published>2021-03-28T02:29:04.000Z</published>
+    <updated>2021-03-28T03:18:00.412Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;还有3天3月就结束了，在这个时间段里属实不太行（&lt;del&gt;学习学到自闭是种什么感觉&lt;/del&gt;）。先说说目前的自学成果，在这一个月里，重新学习了HTML，CSS。学完之后去了解了一下HTML5和CSS3的内容，进而去攻取JS，顺着JS又学习了html</summary>
+        
+      
+    
+    
+    
+    
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>扣图指南</title>
@@ -68,7 +91,7 @@
     <link href="http://hai-chao.gitee.io/blog/2021/02/28/21y1-2-you-xi-zong-jie/"/>
     <id>http://hai-chao.gitee.io/blog/2021/02/28/21y1-2-you-xi-zong-jie/</id>
     <published>2021-02-28T07:20:00.000Z</published>
-    <updated>2021-03-01T13:57:23.488Z</updated>
+    <updated>2021-03-28T02:34:57.634Z</updated>
     
     
       
@@ -84,6 +107,8 @@
     
     
     <category term="游后感" scheme="http://hai-chao.gitee.io/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/"/>
+    
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
