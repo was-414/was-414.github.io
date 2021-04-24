@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>USB科普</title>
+      <link href="/blog/2021/04/24/usb-ke-pu/"/>
+      <url>/blog/2021/04/24/usb-ke-pu/</url>
+      
+        <content type="html"><![CDATA[<p>USB，<strong>U</strong>niversal <strong>S</strong>erial <strong>B</strong>us，<strong>通用串行总线</strong>，是连接计算机系统与外部设备的一种串口总线标准，被广泛的应用于个人电脑和移动设备等通讯产品。</p><h2 id="针对USB的简单科普"><a href="#针对USB的简单科普" class="headerlink" title="针对USB的简单科普"></a>针对USB的简单科普</h2><p>首先，目前常用的USB规范为USB2.0（<del>这个已经落后了</del>）、USB3.0（USB 3.1 Gen1/USB 3.2 Gen1）、USB3.1（USB 3.1 Gen2/USB 3.2 Gen2x1），<strong>传输速度</strong>是这三种规范的最大不同。USB2.0的传输速度最高为480Mbps，即60MB/s；USB3.0的理论传输速度为5.0Gbps，即500MB/s；USB3.1的理论传输速度为10Gbps，即900MB/s。对于这三者我介绍一个<strong>简单的区分方式</strong>：<strong>标识区分法</strong>（通过插口旁边的符号来区分）。</p><p><img src="https://img.maocdn.cn/img/2021/04/24/16.png"></p><p>介绍完USB的规范后，我们还应该了解USB<strong>接口的类型</strong>。同上，介绍最常见的四个类型。</p><p><strong>Type-A：标准版 USB 接口</strong></p><p>Type-A 是我们最常见的一种 USB 接口类型，在电脑上常用。但它有一些显著问题：有方向要求。必须从某个特定的方向才能将接头(公口)插入接口(母口)，但由于 USB 公口的两面外形非常接近，这个插入的过程经常出错。</p><p><strong>Type-B：打印机设备常用</strong></p><p>Type-B 是在打印机上最为常见和流行的一种数据接口类型，以及部分显示器也会被使用这样的接口。</p><p><strong>TYPE Micro-B：移动设备的 USB 标准</strong></p><p>最开始推出的安卓手机中采用的是 Micro USB 接口(即 USB Micro-B)，这种接口至今仍被广泛地应用在各种移动便携式设备上。</p><p><strong>Type-C：或将成为主流</strong></p><p>Type-C 虽然出现不久，但可以预见，随着 USB Type-C 技术的成熟，未来的各种笔记本、平板电脑甚至是智能手机都会开始普及 USB Type-C 接口。现在的Type-C基本有大一统的趋势了，基本上新出的电子设备都在将USB口设置为Type-C 接口。</p><p><img src="https://img.maocdn.cn/img/2021/04/24/17.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>21Y3近况总结</title>
       <link href="/blog/2021/03/28/21y3-jin-kuang-zong-jie/"/>
       <url>/blog/2021/03/28/21y3-jin-kuang-zong-jie/</url>
