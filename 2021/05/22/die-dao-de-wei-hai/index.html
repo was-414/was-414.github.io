@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Mysql自学笔记, 塔纳托斯">
+    <meta name="keywords" content="跌倒的危害, 塔纳托斯">
     <meta name="description" content="一位御宅族的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Mysql自学笔记 | 塔纳托斯</title>
+    <title>跌倒的危害 | 塔纳托斯</title>
     <link rel="icon" type="image/png" href="/blog/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/blog/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Mysql自学笔记</h1>
+                    <h1 class="description center-align post-title">跌倒的危害</h1>
                 </div>
             </div>
         </div>
@@ -346,8 +346,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">学习</span>
+                            <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
+                                <span class="chip bg-color">分享</span>
                             </a>
                         
                     </div>
@@ -362,7 +362,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-08
+                    2021-05-22
                 </div>
                 
 
@@ -371,14 +371,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    4 分
                 </div>
                 
 
@@ -403,396 +403,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="数据库的基本操作"><a href="#数据库的基本操作" class="headerlink" title="数据库的基本操作"></a>数据库的基本操作</h2><pre class=" language-mysql"><code class="language-mysql">在cmd(以管理员身份运行)中:
-开启服务
-net start mysql57
-停止服务
-net stop mysql57
-#mysql57是下载mysql时的默认服务名
-
-显示数据库
-show databases;
-
-创建数据库
-create database if not exists school;
-
-创建数据库并设置字符编码为gbk(utf8)
-create database if not exists school charset=gbk;
-
-删除数据库
-drop database if exists school;
-
-查看创建的数据库
-show create database school;
-
-修改数据库 设置字符编码为utf8
-alter database school charset=utf8;
-
-使用school数据库
-use school;</code></pre>
-<h2 id="表的基本操作"><a href="#表的基本操作" class="headerlink" title="表的基本操作"></a>表的基本操作</h2><pre class=" language-mysql"><code class="language-mysql">显示表
-show tables;
-
-最为简单的创建表
-create table if not exists student(
-    id int,
-    name varchar(30),
-    age int
-);
-标准的创建
-create table if not exists student(
-    id int(4) auto_increment primary key comment 'id',
-    name varchar(30) not null comment '名字',
-    address varchar(30) default '未知' comment '地址',
-    age int(3)
-)engine=innodb;
-# auto_increment 自动增长
-# primary key    主键
-# comment ''     内注释
-# not null       填写时非空
-# default ''     设置默认值
-# engine=innodb  引擎(后面内容)
-
-查看表的结构
-desc student;
-
-删除表
-drop table if exists student;
-
-删除多张表,用逗号隔开
-drop table if exists stu,ooo,jjj;
-
-修改表，增加一个字段
-alter table student add phone varchar(10);
-
-修改表，在id后面加入一个字段
-alter table student add sex varchar(2) after id;
-
-修改表，加一个字段在开头
-alter table student add gender varchar(2) first;
-
-修改表，删除字段
-alter table student drop gender;
-
-修改表，修改表中的字段
-alter table student change sex gender varchar(4);
-
-修改表，只修改表中字段的类型
-alter table student modify phone varchar(1);
-
-修改表，把表重命名
-alter table student rename to person;</code></pre>
-<h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><pre class=" language-mysql"><code class="language-mysql">插入数据
-insert into teacher(id,name,phone,address) values(1,'Frank','1888888','上海');
-insert into teacher values(2,'Tom','000000','北京');   
-#teacher这个表后面的括号可以省略不写，省略后必须按照表的顺序来填写数据
-insert into teacher values(null,'jerry',null,null);
-#id字段为自动增长，写入 null时就会自动增长//name字段设置为 not null，因此性质决定不能为空
-#address字段可以写 null和 default，写入 default后会按照默认值存入
-insert into teacher(name,phone,address) values('haichao',null,null);
-#对于插入数据还可以这样写 
-
-插入多条数据
-insert into teacher values(null,'tom',null,null),(null,'jerry',null,null);
-
-删除数据
-delete from teacher where id=9;
-#删除 从 teacher表  在哪儿 -> id=9;
-#删除要按照唯一确定的来删，如不能以name来删，如删除name='张三'的，这样会把name为张三的全部删除
-delete from teachar where age>30;
-#删除age>30的数据
-
-清空表
-delete from teacher;
-#删除所有的数据，不推荐的写法
-#delete是遍历方式，性能不好，并且key值及会接着自动增长（如删除数据后新插入数据的id会为id=10这种）
-truncate table student;
-#清空表，过程为将整个表干掉，再重新创建删除的表
-
-更新数据
-update teacher set name='frank' where id=1;
-#更新 teacher表 在id=1的地方 重设置name为frank
-#where后的语句注意唯一性
-update teacher set name='frank',address='beijing' where id=1;
-#当没有 where时，会将所有的数据都修改
-update teacher set name='frank' where id=1 or id=2;
-#多条件的写法
-
-查数据（基本）
-select id,phone,address from teacher;
-#查id，phone，address这三个字段
-select * from teacher;
-#查所有字段从teacher这张表中
-#不推荐使用，性能有缺陷
-
-SQL语句区分
-DDL(data definition language)数据库定义语言(针对数据库) create alter drop show
-DML(data manipulation language)数据库操纵语言(针对数据) insert update delete select
-DCL(data control language)数据控制语言(针对用户的)
-
-字符编码问题
-show variables like 'character_set_%';
-#在win10下，要显示中文必须使 character_set_client和character_set_results的值为gbk
-set character_set_client=gbk;
-#修改的方式
-#在实际开发中，character_set_%的值一定为utf8(遵循国际化),目前练习阶段可以为gbk。</code></pre>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><strong>int 类型实际操作和注意事项</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">像人类年龄这种，就可以应用 tinyint unsigned
-因为年龄是不可能为负数，所有采用 unsigned ,并且年龄值不会超过255，所以采用 tinyint
-
-建表时 如: id int(4) auto_increment primary key comment 'id',
-int(4) 表示id采用的是int类型，(4)表示的是宽度，在插入数据时超过这个宽度也是可以的，但不能超过int类型的范围。</code></pre>
-<p><strong>浮点数</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">用法:
-number_1 float(4,1)  (4,1)表示总长度有4位，小数位有1位。
-number_2 double(4,2) (4,2)表示总长度有4位，小数位有2位。
-在应用时:
-insert into test values(1.9,1.99999999); 当小数位超过定义的小数位宽度时，会四舍五入。
-有时也会发生精度丢失,如 values(1.9,1.111111)时，存入的值可能会变成1.10这种</code></pre>
-<p><strong>定点数</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">用法:
-money decimal(20,19) (20,19)表示总长度有20位，小数位有19位。
-在 money 的存储中就可以用 decimal。
-decimal 存储的小数不会发生精度丢失，原因在于 decimal 的整数部分和小数部分是分开存储的。
-decimal 存储的小数当超过定义的宽度时同样会发生四舍五入。</code></pre>
-<p><img src="https://img.maocdn.cn/img/2021/02/05/1.png"></p>
-<p><strong>字符串和文本</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">char    定长字符串
-varchar 变长字符串 常用的字符串，会回收没有用到的空间，效率没有 char 高。
-
-text 常文本数据 如博客文章数据很多，就可以用这个。</code></pre>
-<p><img src="https://img.maocdn.cn/img/2021/02/05/2.png"></p>
-<p><strong>布尔</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">boolean 布尔类型
-用法:
-flag boolean,
-insert into test values(false);  boolean 值有 false 和 true, true 保存为1, false 保存为0。</code></pre>
-<p><strong>枚举</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">用法:
-gender enum('man','woman','?','nothing')  对于这4个数据是以1，2，3，4进行管理的
-insert into test values('man'),(1)        存入的两个数据都是字符串man
-对于枚举里没有的数据写入会报错，如('www'),(5)这种
-
-好处:
-节省空间（存储的是数字，一个占2个字节），速度快，限制数据。</code></pre>
-<p><strong>集合set</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">用法:
-hobby set('哲学','数学','IT','NBA','动漫')
-insert into test values('哲学,数学,IT,动漫')    注意 set和 enum的区别为选多个内容，并且是放在一起，用逗号分开
-错误列子为: insert into test values('哲学','数学','动漫','IT')</code></pre>
-<p><strong>时间日期类型</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">行业规定，每一张表都应该有一个时间日期类型，表示这个数据是什么时候插入，删除等等。
-常用的时间日期类型为 datetime
-用法:
-createTime datetime 
-insert into test values('2021-2-5 20:13:00')   这个一般都是由程序来建立准确的时间日期</code></pre>
-<p><img src="https://img.maocdn.cn/img/2021/02/05/3.png"></p>
-<h2 id="列属性完整性"><a href="#列属性完整性" class="headerlink" title="列属性完整性"></a>列属性完整性</h2><ul>
-<li><strong>sql内注释和代码注释</strong></li>
-</ul>
-<p>单行注释</p>
-<pre class=" language-mysql"><code class="language-mysql">-- 注释内容
-#注释内容</code></pre>
-<p>多行注释</p>
-<pre class=" language-mysql"><code class="language-mysql">/*
-注释内容
-*/</code></pre>
-<p>内注释</p>
-<p>字段后面加 **comment ‘注释内容’**，好处：可以给操作人员一个好的提示。</p>
-<ul>
-<li><strong>数据库完整性（理论，自己学）</strong></li>
-</ul>
-<p>①保证字段完整，要有一个主键来唯一标识</p>
-<p>②数据类型要正确，有些字段可以为空，有些不能为空，有些字段应有default</p>
-<p>③可能需要对外部的引用</p>
-<p>④自定义约束</p>
-<ul>
-<li><strong>default</strong></li>
-</ul>
-<p>设置默认值，一个例子：在高考时，有个学生没有来，此时插入数据（考试成绩）不能填为0或null，此时应填为default（设置为缺考）。</p>
-<ul>
-<li><strong>auto_increment</strong></li>
-</ul>
-<p>自增。填了auto_increment必须是primary key，而primary key不一定是auto_increment。</p>
-<ul>
-<li><strong>primary key</strong></li>
-</ul>
-<p>主键，绝对唯一，能够区分大众数据，而且是当中最重要的一块，且具有唯一性，且能够确认数据的唯一性，存在性，不可重复性，</p>
-<p>且有可能与其他的表产生关系。简单来说，primary key唯一的，不可重复的，必须要有，能被其他表引用。在插入数据时，主键值不能为null，当设置了auto_increment后可以将主键值设为null。</p>
-<p>选择主键：最少情况选一个字段为主键，尽可能选更新改动少的，如id，身份证号。用一个主键就可以了，两个不好维护，用数字来作为主键（字符串不好处理）。</p>
-<p>设置主键的好处：①保证数据的完整性②加快查询某种数据的速度</p>
-<p><strong>后期（建完表之后）添加主键与删除主键</strong></p>
-<pre class=" language-mysql"><code class="language-mysql">alter table teacher add primary key (id);
-alter table teacher drop primary key;</code></pre>
-<ul>
-<li><strong>组合键</strong></li>
-</ul>
-<p>一个表里不能有多个主键，但是能有多个字段组成的一个组合键，也可称为复合主键（依旧是一个主键）。</p>
-<p>一个极端的使用案例：网站，id唯一，有些网站的昵称不可重复，可以这样使用组合键，但会出现问题——&gt;在查询时无法确定是以id还是name为准，及扩展性不好。</p>
-<p><strong>设置组合键</strong></p>
-<p>①在创建表时直接给</p>
-<p>②后期添加</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table teacher add primary key (id,name);</code></pre>
-<ul>
-<li><strong>唯一键</strong></li>
-</ul>
-<p>唯一的，不可重复，且可以为null，与主键不同的是不能区分数据。在一个表中可以有多个唯一键，唯一键的作用：保证数据的不可重复性。在上述组合键的那个极端案例中就应使用唯一键。</p>
-<p><strong>添加唯一键</strong></p>
-<p>①在创建表时加入    使用<strong>unique</strong>关键字</p>
-<p>②后期添加与删除</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table teacher add unique (name);
-alter table teacher drop index name;</code></pre>
-<p>③添加多个唯一键</p>
-<p>创建表时在需要的字段后面写入关键字 <strong>unique</strong></p>
-<p>后期添加</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table teacher add unique (name,phone);</code></pre>
-<ul>
-<li><strong>外键</strong></li>
-</ul>
-<p>当两个表中有公共字段时，字段名不一定相同，此时可以使用外键来进行关联（如食堂交易表会使用到学生表的id）。<strong>外键只是学习用，实际开发中，对于并发的项目的处理禁止使用外键。</strong></p>
-<p><strong>添加外键</strong></p>
-<p>①在创建表时</p>
-<pre class=" language-mysql"><code class="language-mysql">stuId int(4),     #定义的数据类型要和主表中的一致
-foreign key (stuId) references student (id),
-设置一个外键   是谁       它从哪张表来   从student表中的id字段</code></pre>
-<p>②后期添加</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table teacher add foreign key (stuId) references student (id);</code></pre>
-<p>③删除外键</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table teacher drop foreign key teacher_ibfk_1;
-#teacher_ibfk_1是这个外键的别名，删除外键不能通过字段来直接删除，要删除外键的别名
-#查看外键别名
-show create table teacher;</code></pre>
-<p><strong>针对外键的操作</strong></p>
-<p>置空操作：主表中id=5的人的数据被删除后，从表中对应的外键值会被设置为null。</p>
-<p>级联操作：主表中id=5的人的数据被更新后（如id变为9），从表中对应的外键值会相应的变化。</p>
-<p>置空操作一般是留给外界删除数据用的，级联操作一般是留给外界更新数据的。</p>
-<pre class=" language-mysql"><code class="language-mysql">#在创建表，添加外键时
-foreign key (stuId) references student (id) on delete set null on update cascade
-# on delete set null 为置空操作
-# on update cascade  为级联操作</code></pre>
-<h2 id="数据库设计思维"><a href="#数据库设计思维" class="headerlink" title="数据库设计思维"></a>数据库设计思维</h2><p>关系？  关系型数据库  两张表的公有字段去确定数据的完整性</p>
-<p>行？  一条数据  一条数据记录  实体</p>
-<p>列？  一个字段   属性</p>
-<p>注意<strong>避免字段冗余</strong>，例如：总分这个字段，大学期末成绩考试的成绩不重视于总分，因此不需要这个字段；对于高考成绩来说，虽说总分可以由其余分数之和可得，但还是需要这个字段，原因在于高考查询人数很多，对于总分的权重更高。</p>
-<p><strong>实体和实体之间的关系</strong>：1、一对一（一个家教指导一个学生）2、一对多（一个学生对于食堂的多条消费）3、多对一（多个程序员干一个项目）4、多对多（多个程序员完成多个项目）</p>
-<p>遵循Codd六种范式，<strong>尽可能遵守</strong>，事实情况下，能用三个就不错了。</p>
-<p>第一范式，确保每列字段的原子性（及<strong>保证每列字段不可再分</strong>）。拆分主要看：需要统计就要拆分，不需要统计时就不拆分。例：地区人口普查，按什么什么省，什么什么市来拆分，及省和市这有两个字段；而填写家庭地址时，就一个address字段，不需要拆分成省和市。</p>
-<p>第二范式，非键字段必须依赖于键字段（及<strong>在该表中的字段要符合</strong>，如不能够在学生表中加一个总财产的字段，这显然不合理）。</p>
-<p>第三范式，消除传递依赖（及<strong>多余的字段要考虑去掉</strong>）。</p>
-<h2 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h2><pre class=" language-mysql"><code class="language-mysql">select 
-# select 可以做计算
-select 2*7;
-select '你好' as '世界';
-# as 取别名   '世界'作为字段名
-
-from
-# from ?? 来自哪张表
-select * from t1,t2;      
-# 查询所有数据从t1和t2表中，这个会出现笛卡尔积的现象
-
-dual
-# 默认伪表
-select 2*7;
-本质上是 select 2*7 from dual;
-
-where
-# 条件筛选用的。有< <= = >= > and or not
-
-in
-select * from t4 where address in('beijing','shanghai');
-等价于
-select * from t4 where address='beijing' or address='shanghai';
-# in前可以加一个not，表示不包含这些数据的。
-
-between  and
-# 在...之间
-select * from t4 where age between 15 and 20;
-# 这个区间为[15,20]
-# between 前可以加not，表示取反
-
-is null
-# 是不是为空
-select * from t4 where age is null;
-# null 前可加 not,表示非空
-
-聚合函数（作统计用）
-# 求一张成绩表中所有语文成绩的和
-select sum(chinese) from score;
-# chinese 为score表中字段
-# 求平均值
-select avg(chinese) from score;
-# 求该列最大最小值
-max() / min()
-# 统计次数
-count()
-
-like 模糊查询
-select * from student where name like '张%';
-# 查性张的所有人，%表示一个或多个字符
-select * from student where name like '张_';
-# _(下划线)表示一个字符
-
-order by 排序查询
-select * from score order by math asc;
-# 从score表中查所有数据通过math升序排
-# asc 升序  desc  降序
-
-group by 分组查询
-# 求一个表中男性的平均年龄和女性的平均年龄
-select avg(age) as '年龄' , gender as '性别' from student group by gender;
-# 记住，要使用group by, 查询的字段必须是分组字段和聚合函数
-
-group_concat
-# 使数据聚合显示
-select group_concat(name),gender from student group by gender;
-
-having
-# 用于查询后的表（如分组查询后构成的虚拟表）的条件筛选
-# 而 where是用作原来的表（及查询前有的表）作条件筛选
-select avg(age) as 'age', address as 'address' from student group by address having age>24;
-
-distinct / all
-# distinct 去重
-select distinct address from student;
-select address from student; 本质上是 select all address from student;</code></pre>
-<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><pre class=" language-mysql"><code class="language-mysql">union 联合查询
-select name,age from student union (这里本质上有 all,可换为 distinct) select name,age from teacher;
-
-inner join
-# 内连接,一定要有公共字段
-select name,score from student inner join score on student.id=score.stuId;
-# 一张学生表，一张学生的成绩表，两者有个公共字段
-# student inner join score ,将student表和score表进行内连接
-# on student.id=score.stuId,通过两张表中的公共字段作为连接依据
-
-left join
-# 左连接，以左表为基准（基准含义为:当基准表中有的而非基准表中没有的会将基准表中的显示出来）
-right join
-# 右连接，以右表为基准
-
-cross join
-# 交叉连接
-select * from t1 cross join t3;
-# 会返回一个笛卡尔积
-
-natural join
-# 自然内连接，会以同名字段作为两张表的连接依据
-natural left join / natural right join    自然左/右连接
-# 当无同名字段时，会返回笛卡尔积
-# 当自然连接时有两个或两个以上的同名字段，会返回空表回来
-# 当自然连接时有两个或两个以上的同名字段，会返回空表回来
-
-using
-# 用来指定连接的字段（当两张表有同名字段时）
-select * from t1 inner join t3 using(id);
-# 实际上不常用自然连接和using，一般用inner join 进行内连接并写全代码</code></pre>
-<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><pre class=" language-mysql"><code class="language-mysql">基本语法
-# 查询分数表中分数大于85分的学生在学生表中的所有信息
-select * from student where id in(select stuId from score where score>=85);
-# not in 取反  in 可理解为相同，等于
-exists/not exists  存在/不存在
-select * from student where exists(select stuId from score where score>=85);
-# 如果有人分数>=85就查询全班所有人的信息</code></pre>
+                <p>最近一阵因意外导致更新频率变慢（<del>话说没意外也会鸽的</del>），正如标题所述，本文将科普<strong>跌倒的危害</strong>。</p>
+<h2 id="我的经历"><a href="#我的经历" class="headerlink" title="我的经历"></a>我的经历</h2><p>记得那是要放51劳动假的前几日，地面因昨晚下了雨是湿的，走的地方具有一定的坡度，倒霉的我经过时踩滑了，向后跌倒了，无意识下用手去撑地，结果就是手不能上下左右扭动，我以为不是什么大伤，心想过一会儿就好了，中午和晚上还喷了喷云南白药。第二天手还不见好，就去医院挂号、验伤。结果为三角骨骨折，打上石膏，右手基本不能用。</p>
+<p><a target="_blank" rel="noopener" href="https://img.wang/image/18.bFzzF"><img src="https://img.maocdn.cn/img/2021/05/22/18.jpg"></a></p>
+<p><del>上图为我的右手被封印的样子</del></p>
+<p>对于右手不能用之事，确有诸多不便之处。现为第4周，还需再等2周就可以去医院复查。在这段时间中，确实令人感受非凡，我也从中领悟了一些道？具体不便多说，话题还是转回跌倒。</p>
+<p>我的这种状况我自己分析了下，我发现这专吃惯用手，在来不及思考的状况下，基于身体的本能用手去撑地，那股冲击力手是承受不了的，结果就如同我这般，轻则扭伤，重则骨折。这次的跌倒实属出乎我的识，说起来，我在这个学校里跌倒过4次，无疑这第4次是最严重的，对比前3次，都是向后滑，不同处为手的应激反应，之前3次跌倒都成手脚朝天的模样，属实丢脸，受伤状况为屁股疼。因此，此结论为<strong>不要小看跌倒</strong>，跌倒造成的危害我亲身经历过，我有发言权。</p>
+<h2 id="跌倒危害之科普"><a href="#跌倒危害之科普" class="headerlink" title="跌倒危害之科普"></a>跌倒危害之科普</h2><p>跌倒是我国伤害死亡的第四位原因，在65岁以上的老年人中则为首位。每年大约30% 以上的老年人发生过跌倒。老年人一旦跌倒会造成很多不良后果，如骨折，尤其是髋关节骨折最常见，其次是皮肤擦伤、软组织损伤、脑震荡、脑挫裂伤、撞伤或开放伤、关节损伤等，甚至会引起脑出血等更加严重的后果，最终可导致老年人死亡，而更多的则是导致了跌倒的老年人产生了各种身体残疾！</p>
+<h3 id="1-什么是跌倒"><a href="#1-什么是跌倒" class="headerlink" title="1.什么是跌倒"></a>1.什么是跌倒</h3><p>跌倒是指突发、不自主的、非故意的体位改变，倒在地上或更低的平面，是威胁患者安全的重要问题，病房患者治疗期间受病情、药物毒副作用的影响，跌倒发生的风险高，因此跌倒的预防尤为重要。</p>
+<h3 id="2-跌倒高危人群"><a href="#2-跌倒高危人群" class="headerlink" title="2.跌倒高危人群"></a>2.跌倒高危人群</h3><p><img src="https://img.maocdn.cn/img/2021/05/22/22.jpg"></p>
+<h3 id="3-跌倒原因"><a href="#3-跌倒原因" class="headerlink" title="3.跌倒原因"></a>3.跌倒原因</h3><p><img src="https://img.maocdn.cn/img/2021/05/22/19.jpg"></p>
+<h3 id="4-跌倒的危害"><a href="#4-跌倒的危害" class="headerlink" title="4.跌倒的危害"></a>4.跌倒的危害</h3><p><img src="https://img.maocdn.cn/img/2021/05/22/20.jpg"></p>
+<p><img src="https://img.maocdn.cn/img/2021/05/22/21.jpg"></p>
+<h3 id="5-跌倒的预防"><a href="#5-跌倒的预防" class="headerlink" title="5.跌倒的预防"></a>5.跌倒的预防</h3><p>1.长期卧床者，起床时动作缓慢，循序渐进，应遵循<strong>“三部曲”平卧30秒 ，坐起30秒，站立30秒</strong>。即第一个30秒:醒来后，勿立即起床，在床上躺30秒;第二个30秒:起来后，在床沿两腿下垂坐30秒;第三个30秒:下地后，靠床站30秒再行走。</p>
+<p>2.在行走时，避免突然改变体位，引起体位性低血压，特别是夜间。</p>
+<p>3.如您出现双眼发黑，下肢无力，行走不稳时，应立即原地坐（蹲）下或靠墙，并呼叫帮助。</p>
+<p>4.请穿合适尺码的衣裤，不应穿拖鞋行走，鞋子的大小要刚好，注意防滑警示牌，发现地面潮湿时，请绕行。</p>
+<p>5.行动不便，老年体弱，生活不能自理者，请在家属或陪护的陪伴下活动，不要自行离床活动。</p>
+<p>6.如您在服用特殊药物：镇静安神药，降压药，降糖药，利尿药等，勿随意离床活动，应在陪同下行走。</p>
+<p>7.在经常活动的地方，不要堆放杂物，保持走道通畅。</p>
+<p>8.加强照明，卧室留夜灯，室内光线柔和，方便您行动。</p>
+<p>9.卫生间做好<strong>地面防滑处理</strong>，避免发生滑倒事件。</p>
+<p>10.日常生活用品不宜放置过高或过低，放在容易取到的地方。</p>
+<p>11.室内家具摆放位置要合理，保持地面平坦无障碍。</p>
+<p>在医院中，有跌倒10知，看下图</p>
+<p><img src="https://img.maocdn.cn/img/2021/05/22/23.jpg"></p>
+<h3 id="6-不幸跌倒"><a href="#6-不幸跌倒" class="headerlink" title="6.不幸跌倒"></a>6.不幸跌倒</h3><p>自己跌倒怎么起身？</p>
+<p>按照一个原则：不要贸然起身，先评估受伤情况，只有在没受伤的情况下、感到自己有足够力量时，才应考虑站起来。</p>
+<p>遇见别人（特别为老人）跌倒，该如何做？</p>
+<p>切不可急于将老人扶起，应先观察老人的表情、神态，询问摔倒的原因，如遇到昏迷或有语言障碍的病人，即打急救电话；见呕吐病人，应将其头部侧向一边，以防呕吐物返回流入呼吸道引起窒息。如可以交流的老人，视情况给予帮助。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>大致科普了下跌倒，希望能给大家带来收获，还希望大家能对此引起重视。写下此文，故以记录，勿悲，勿忘，勿怒，勿现，吸取，向前，将，有义。</p>
 
                 
             </div>
@@ -819,7 +459,7 @@ select * from student where exists(select stuId from score where score>=85);
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hai-chao.gitee.io/blog/blog/2021/03/08/mysql-zi-xue-bi-ji/">http://hai-chao.gitee.io/blog/blog/2021/03/08/mysql-zi-xue-bi-ji/</a>
+                    <a href="http://hai-chao.gitee.io/blog/blog/2021/05/22/die-dao-de-wei-hai/">http://hai-chao.gitee.io/blog/blog/2021/05/22/die-dao-de-wei-hai/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -857,8 +497,8 @@ select * from student where exists(select stuId from score where score>=85);
                     
                         <div class="article-tag">
                             
-                                <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">学习</span>
+                                <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
+                                    <span class="chip bg-color">分享</span>
                                 </a>
                             
                         </div>
@@ -1028,17 +668,18 @@ select * from student where exists(select stuId from score where score>=85);
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/blog/2021/03/14/kou-tu-zhi-nan/">
+                <a href="/blog/2021/05/22/die-dao-de-wei-hai/">
                     <div class="card-image">
                         
                         
-                        <img src="/blog/medias/featureimages/3.jpg" class="responsive-img" alt="扣图指南">
+                        <img src="/blog/medias/featureimages/16.jpg" class="responsive-img" alt="跌倒的危害">
                         
-                        <span class="card-title">扣图指南</span>
+                        <span class="card-title">跌倒的危害</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1048,9 +689,9 @@ select * from student where exists(select stuId from score where score>=85);
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1059,11 +700,12 @@ select * from student where exists(select stuId from score where score>=85);
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
+                    <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
+                        <span class="chip bg-color">分享</span>
                     </a>
                     
                 </div>
@@ -1077,13 +719,13 @@ select * from student where exists(select stuId from score where score>=85);
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/blog/2021/02/28/21y1-2-you-xi-zong-jie/">
+                <a href="/blog/2021/04/24/usb-ke-pu/">
                     <div class="card-image">
                         
                         
-                        <img src="/blog/medias/featureimages/5.jpg" class="responsive-img" alt="21Y1-2游戏总结">
+                        <img src="/blog/medias/featureimages/17.jpg" class="responsive-img" alt="USB科普">
                         
-                        <span class="card-title">21Y1-2游戏总结</span>
+                        <span class="card-title">USB科普</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1094,7 +736,7 @@ select * from student where exists(select stuId from score where score>=85);
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-24
                             </span>
                         <span class="publish-author">
                             
@@ -1107,12 +749,8 @@ select * from student where exists(select stuId from score where score>=85);
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/">
-                        <span class="chip bg-color">游后感</span>
-                    </a>
-                    
-                    <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
+                        <span class="chip bg-color">分享</span>
                     </a>
                     
                 </div>
