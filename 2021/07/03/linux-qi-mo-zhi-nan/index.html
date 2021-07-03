@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Markdown学习记录, 塔纳托斯">
+    <meta name="keywords" content="linux期末指南, 塔纳托斯">
     <meta name="description" content="一位御宅族的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Markdown学习记录 | 塔纳托斯</title>
+    <title>linux期末指南 | 塔纳托斯</title>
     <link rel="icon" type="image/png" href="/blog/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/blog/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Markdown学习记录</h1>
+                    <h1 class="description center-align post-title">linux期末指南</h1>
                 </div>
             </div>
         </div>
@@ -346,8 +346,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">学习</span>
+                            <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
+                                <span class="chip bg-color">总结</span>
                             </a>
                         
                     </div>
@@ -362,7 +362,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-12
+                    2021-07-03
                 </div>
                 
 
@@ -371,14 +371,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    441
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -403,46 +403,713 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。Markdown编写的文档的后缀名为<code>.md</code>。下面我将记录Markdown的常用语法。</p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>用#来表示1~6级标题，几级标题对应有几个#号，例如:</p>
-<pre class=" language-java"><code class="language-java"># 一级标题
-### 三级标题</code></pre>
-<p>注意事项:#号后面要加一个<strong>空格</strong>。</p>
-<h2 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式"></a>段落格式</h2><p><strong>换行</strong><br>两个空格加一个回车。<br><strong>分割线</strong><br>三个及三个以上的减号（-）号。<br><strong>删除线</strong></p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">~</span><span class="token operator">~</span>删除的内容<span class="token operator">~</span><span class="token operator">~</span></code></pre>
-<p><strong>下划线</strong></p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>u<span class="token operator">></span>加下划线的内容<span class="token operator">&lt;</span><span class="token operator">/</span>u<span class="token operator">></span></code></pre>
-<p><strong>脚注</strong></p>
-<pre class=" language-java"><code class="language-java">内容<span class="token punctuation">[</span><span class="token operator">^</span>test<span class="token punctuation">]</span>
-<span class="token punctuation">[</span><span class="token operator">^</span>text<span class="token punctuation">]</span><span class="token operator">:</span>内容的意思</code></pre>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p><strong>无序列表</strong><br>用星号(<code>*</code>)、加号(<code>+</code>)或是减号(<code>-</code>)作为列表标记，后面加一个<strong>空格</strong>。<br><strong>有序列表</strong><br>数字1加一个点（.）。<br><strong>列表嵌套</strong><br>子列表前加4个空格。</p>
-<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p><code>&gt;</code>加一个空格。</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">></span> 区块引用
-<span class="token operator">></span> 今天天气真好！</code></pre>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p><strong>`代码`</strong><br><strong>```<br>代码段<br>```</strong></p>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>用法如下:</p>
-<pre class=" language-java"><code class="language-java">用法一<span class="token operator">:</span>
-<span class="token punctuation">[</span>链接名称<span class="token punctuation">]</span><span class="token punctuation">(</span>链接地址<span class="token punctuation">)</span>  或  <span class="token operator">&lt;</span>链接地址<span class="token operator">></span>
-用法二<span class="token operator">:</span>
-通过变量来设置一个链接，变量赋值在文档末尾进行
-这个链接用 <span class="token number">1</span> 作为网址变量 <span class="token punctuation">[</span>Google<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-这个链接用 runoob 作为网址变量 <span class="token punctuation">[</span>Runoob<span class="token punctuation">]</span><span class="token punctuation">[</span>runoob<span class="token punctuation">]</span>
-然后在文档的结尾为变量赋值（网址）
-  <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">:</span> http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>google<span class="token punctuation">.</span>com<span class="token operator">/</span>
-  <span class="token punctuation">[</span>runoob<span class="token punctuation">]</span><span class="token operator">:</span> http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>runoob<span class="token punctuation">.</span>com<span class="token operator">/</span></code></pre>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><pre class=" language-java"><code class="language-java"><span class="token operator">!</span><span class="token punctuation">[</span>alt 属性文本<span class="token punctuation">]</span><span class="token punctuation">(</span>图片地址<span class="token punctuation">)</span>
+                <h2 id="linux基本命令"><a href="#linux基本命令" class="headerlink" title="linux基本命令"></a>linux基本命令</h2><p>命令格式：命令 -选项 参数 （选项和参数可以为空）如：ls -la /usr</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>参数</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>reboot</td>
+<td></td>
+<td>reboot</td>
+<td>重启</td>
+</tr>
+<tr>
+<td>init 0</td>
+<td></td>
+<td>init 0</td>
+<td>关机</td>
+</tr>
+<tr>
+<td>shutdown -h now</td>
+<td></td>
+<td>shutdown -h now</td>
+<td>关机</td>
+</tr>
+<tr>
+<td>ifconfig</td>
+<td></td>
+<td>ifconfig</td>
+<td>查看ip地址</td>
+</tr>
+<tr>
+<td>ping</td>
+<td></td>
+<td>ping <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></td>
+<td>测试网络联通性</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>空（改自己）</td>
+<td>passwd</td>
+<td>更改自己密码</td>
+</tr>
+<tr>
+<td></td>
+<td>其他用户</td>
+<td>passwd centos</td>
+<td>更改其他用户密码（管理员操作）</td>
+</tr>
+<tr>
+<td>date</td>
+<td></td>
+<td>date</td>
+<td>显示系统日期</td>
+</tr>
+<tr>
+<td>cal</td>
+<td>空</td>
+<td>cal</td>
+<td>显示当前日历</td>
+</tr>
+<tr>
+<td></td>
+<td>月，年</td>
+<td>cal 10 2008</td>
+<td>显示2008年10月的日历</td>
+</tr>
+<tr>
+<td>who</td>
+<td></td>
+<td>who</td>
+<td>列出当前系统所有用户</td>
+</tr>
+<tr>
+<td>who am i</td>
+<td></td>
+<td>who am i</td>
+<td>显示你的登录用户名</td>
+</tr>
+<tr>
+<td>clear</td>
+<td></td>
+<td>clear</td>
+<td>清屏</td>
+</tr>
+<tr>
+<td>echo</td>
+<td>字符串</td>
+<td>echo hello world</td>
+<td>在屏幕上输出hello world</td>
+</tr>
+<tr>
+<td>mesg y</td>
+<td></td>
+<td>mesg y</td>
+<td>确保自己能收到消息</td>
+</tr>
+<tr>
+<td>write</td>
+<td>用户</td>
+<td>write root</td>
+<td>向root发消息,写完ctrl+d结束消息编辑</td>
+</tr>
+<tr>
+<td>history</td>
+<td></td>
+<td>history</td>
+<td>查看过去的历史命令</td>
+</tr>
+<tr>
+<td></td>
+<td>数字</td>
+<td>history 20</td>
+<td>查看过去的20条历史命令</td>
+</tr>
+<tr>
+<td>!</td>
+<td>数字</td>
+<td>!5</td>
+<td>执行历史命令列表的第5条命令</td>
+</tr>
+<tr>
+<td>exit</td>
+<td></td>
+<td>exit</td>
+<td>退出登录到终端的用户</td>
+</tr>
+<tr>
+<td>logout</td>
+<td></td>
+<td>logout</td>
+<td>退出登录到终端的用户</td>
+</tr>
+</tbody></table>
+<h2 id="文件管理相关命令"><a href="#文件管理相关命令" class="headerlink" title="文件管理相关命令"></a>文件管理相关命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>参数</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cat</td>
+<td></td>
+<td>cat 1.txt</td>
+<td>查看文件内容</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>cat 1.txt 2.txt</td>
+<td>合并文件并查看内容</td>
+</tr>
+<tr>
+<td></td>
+<td>-n</td>
+<td>cat -n 1.txt</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td></td>
+<td>-A  or -E</td>
+<td>cat -A 1.txt</td>
+<td>-A显示所有不可见字符，-E显示行结束符</td>
+</tr>
+<tr>
+<td>more</td>
+<td></td>
+<td>more 1.txt</td>
+<td>分页显示，按enter向后移动一行，按空格向后移动一页,按b向前移动到上一屏，按q退出</td>
+</tr>
+<tr>
+<td></td>
+<td>-num</td>
+<td>more -10 1.txt</td>
+<td>表示一个屏幕显示该数字的行数</td>
+</tr>
+<tr>
+<td></td>
+<td>-p</td>
+<td>more -p 1.txt</td>
+<td>显示下一屏之前先清屏</td>
+</tr>
+<tr>
+<td></td>
+<td>+num</td>
+<td>more +4 1.txt</td>
+<td>从该数字行开始显示</td>
+</tr>
+<tr>
+<td></td>
+<td>-d</td>
+<td>more -d 1.txt</td>
+<td>底部显示友好信息</td>
+</tr>
+<tr>
+<td>less</td>
+<td></td>
+<td>less 1.txt</td>
+<td>分页显示，和more类似(参数相同写法)，有查找功能</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>less 1.txt</td>
+<td>查询关键字时，先输入/，在输入关键字</td>
+</tr>
+<tr>
+<td>head</td>
+<td></td>
+<td>head 1.txt</td>
+<td>显示文件开头若干行</td>
+</tr>
+<tr>
+<td></td>
+<td>-num</td>
+<td>head -10 1.txt</td>
+<td>显示文件开头10行</td>
+</tr>
+<tr>
+<td>tail</td>
+<td></td>
+<td>tail 1.txt</td>
+<td>显示文件末尾若干行</td>
+</tr>
+<tr>
+<td></td>
+<td>-num</td>
+<td>tail -10 1.txt</td>
+<td>显示文件末尾10行</td>
+</tr>
+<tr>
+<td>touch</td>
+<td></td>
+<td>touch str.txt</td>
+<td>创建空文件（该文件不存在）</td>
+</tr>
+<tr>
+<td></td>
+<td>-t</td>
+<td>touch -t 201809011230.10 1.txt</td>
+<td>修改文件日期</td>
+</tr>
+<tr>
+<td>grep</td>
+<td></td>
+<td>grep root 1.txt</td>
+<td>查找文件或目录中含指定字符串的行</td>
+</tr>
+<tr>
+<td></td>
+<td>-i</td>
+<td>grep -i root 1.txt</td>
+<td>不区分大小写</td>
+</tr>
+<tr>
+<td></td>
+<td>-n</td>
+<td>grep -n root 1.txt</td>
+<td>输出时加上对应的行号</td>
+</tr>
+<tr>
+<td></td>
+<td>-c</td>
+<td>grep -c root 1.txt</td>
+<td>输出与字符串相匹配的行的数目</td>
+</tr>
+<tr>
+<td></td>
+<td>-v</td>
+<td>grep -v root 1.txt</td>
+<td>输出不相匹配的行</td>
+</tr>
+<tr>
+<td></td>
+<td>-x</td>
+<td>grep -x root 1.txt</td>
+<td>严格匹配</td>
+</tr>
+<tr>
+<td></td>
+<td>-r</td>
+<td>grep -r root dir</td>
+<td>递归查询（查目录）</td>
+</tr>
+<tr>
+<td>sort</td>
+<td></td>
+<td>sort 1.txt</td>
+<td>对文本的各行排序</td>
+</tr>
+<tr>
+<td></td>
+<td>-r</td>
+<td>sort -r 1.txt</td>
+<td>逆序排</td>
+</tr>
+<tr>
+<td></td>
+<td>-o</td>
+<td>sort 1.txt -o 2.txt</td>
+<td>将结果输出到指定文件中</td>
+</tr>
+<tr>
+<td></td>
+<td>-n</td>
+<td>sort -n 1.txt</td>
+<td>按数值大小来排序</td>
+</tr>
+<tr>
+<td></td>
+<td>-k</td>
+<td>sort -k 1.txt</td>
+<td>指定每一行中第几个字符为排序关键字</td>
+</tr>
+<tr>
+<td>uniq</td>
+<td></td>
+<td>uniq 1.txt</td>
+<td>比较相邻行，去掉重复的行</td>
+</tr>
+<tr>
+<td></td>
+<td>-c</td>
+<td>uniq -c 1.txt</td>
+<td>输出时，在行首显示该行在文本里出现的次数</td>
+</tr>
+<tr>
+<td></td>
+<td>-d</td>
+<td>uniq -d 1.txt</td>
+<td>只显示重复的行</td>
+</tr>
+<tr>
+<td></td>
+<td>-u</td>
+<td>uniq -u 1.txt</td>
+<td>只显示不重复的行</td>
+</tr>
+<tr>
+<td>cp</td>
+<td></td>
+<td>cp 1.txt 2.txt</td>
+<td>将源文件或目录复制到指定文件或目录(指定文件不存在会自动创建)</td>
+</tr>
+<tr>
+<td></td>
+<td>-p</td>
+<td>cp -p 1.txt 2.txt</td>
+<td>除复制文件外，还将存储权限和修改时间一并复制</td>
+</tr>
+<tr>
+<td></td>
+<td>-r or -R</td>
+<td>cp -r dir1 dir2</td>
+<td>递归复制（针对目录）</td>
+</tr>
+<tr>
+<td></td>
+<td>-a</td>
+<td>cp -a dir1 dir2</td>
+<td>相当于 cp -rp dir1 dir2</td>
+</tr>
+<tr>
+<td>rm</td>
+<td></td>
+<td>rm 1.txt</td>
+<td>删除文件或目录</td>
+</tr>
+<tr>
+<td></td>
+<td>-r or -R</td>
+<td>rm -r dir</td>
+<td>递归删</td>
+</tr>
+<tr>
+<td></td>
+<td>-f</td>
+<td>rm -f 1.txt</td>
+<td>强制删除，不给出提示信息</td>
+</tr>
+<tr>
+<td></td>
+<td>-i</td>
+<td>rm -i 1.txt</td>
+<td>删除前先询问用户</td>
+</tr>
+<tr>
+<td></td>
+<td>-v</td>
+<td>rm -v 1.txt</td>
+<td>显示指令执行过程</td>
+</tr>
+<tr>
+<td>mv</td>
+<td></td>
+<td>mv 1.txt ..</td>
+<td>移动或更名指定的文件或目录</td>
+</tr>
+<tr>
+<td></td>
+<td>-b</td>
+<td>mv -b 1.txt ..</td>
+<td>覆盖前会备份原有文件</td>
+</tr>
+<tr>
+<td></td>
+<td>-f</td>
+<td>mv -bf 1.txt ..</td>
+<td>强制覆盖，不给提示信息</td>
+</tr>
+<tr>
+<td></td>
+<td>-i</td>
+<td>mv -i 1.txt ..</td>
+<td>覆盖前先询问用户</td>
+</tr>
+<tr>
+<td></td>
+<td>-v</td>
+<td>mv -v 1.txt ..</td>
+<td>显示指令执行过程</td>
+</tr>
+<tr>
+<td>wc</td>
+<td></td>
+<td>wc 1.txt 2.txt</td>
+<td>统计文件内容</td>
+</tr>
+<tr>
+<td></td>
+<td>-c -l -w</td>
+<td>wc -clw 1.txt</td>
+<td>字节数、行数、字数</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td></td>
+<td>mkdir ./t1</td>
+<td>创建目录</td>
+</tr>
+<tr>
+<td></td>
+<td>-p</td>
+<td>mkdir ./t1/t2</td>
+<td>创建多级目录</td>
+</tr>
+<tr>
+<td></td>
+<td>-m</td>
+<td>mkdir -m 755 ./t1</td>
+<td>创建目录的同时赋予权限</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td></td>
+<td>rm t1</td>
+<td>删除目录</td>
+</tr>
+<tr>
+<td></td>
+<td>-p</td>
+<td>rm t1/t2/t3</td>
+<td>删除多级目录（没有rm好用）</td>
+</tr>
+<tr>
+<td>cd</td>
+<td></td>
+<td>cd ..      or     cd dir1</td>
+<td>切换目录</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td></td>
+<td>pwd</td>
+<td>显示当前目录</td>
+</tr>
+<tr>
+<td>ls</td>
+<td></td>
+<td>ls</td>
+<td>列出当前目录的内容，也可以自己指定路径</td>
+</tr>
+<tr>
+<td></td>
+<td>-l</td>
+<td>ls -l    or     ll</td>
+<td>以长格式（详细格式）显示</td>
+</tr>
+<tr>
+<td></td>
+<td>-a   or   -A</td>
+<td>ls -a</td>
+<td>显示所有文件和目录，-A不会显示.(当前目录)和..(上级目录)</td>
+</tr>
+<tr>
+<td></td>
+<td>-R</td>
+<td>ls -R</td>
+<td>递归处理</td>
+</tr>
+<tr>
+<td>ln</td>
+<td></td>
+<td>ln 1.txt 1t</td>
+<td>建立链接，链接分为硬链接（相当于别名）和软链接（相当于快捷方式）</td>
+</tr>
+<tr>
+<td></td>
+<td>-s</td>
+<td>ln -s 1.txt 1t</td>
+<td>加上-s是软链接方式，不加是硬链接方式</td>
+</tr>
+</tbody></table>
+<h2 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h2><h3 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h3><pre class=" language-shell"><code class="language-shell">chmod    改变文件或目录的权限
+语法：chmod [who] [+-=] [mode] 文件名
+[who]可以为一下的内容中的一个或是组合
+u 文件主，创建这个文件的主人
+g 组
+o 其他用户
+a 所有用户
+[+-=]
++ 增加权限
+- 减去权限
+= 赋值权限
+[mode]权限，分为下面三种
+r 可读
+w 可写
+x 可执行
+列子：
+chmod u+x ex1
+chmod u+rwx,o-rw ex1
+chmod u=rwx,g=rx,o=r ex1
 
-<span class="token operator">!</span><span class="token punctuation">[</span>alt 属性文本<span class="token punctuation">]</span><span class="token punctuation">(</span>图片地址 <span class="token string">"可选标题"</span><span class="token punctuation">)</span></code></pre>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><pre class=" language-java"><code class="language-java"><span class="token operator">|</span>  表头   <span class="token operator">|</span> 表头  <span class="token operator">|</span>
-<span class="token operator">|</span>  <span class="token operator">--</span><span class="token operator">--</span>  <span class="token operator">|</span> <span class="token operator">--</span><span class="token operator">--</span>  <span class="token operator">|</span>
-<span class="token operator">|</span> 单元格  <span class="token operator">|</span> 单元格 <span class="token operator">|</span>
-<span class="token operator">|</span> 单元格  <span class="token operator">|</span> 单元格 <span class="token operator">|</span></code></pre>
-<p>说明:可以设置表格的对齐方式</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">|</span> 左对齐 <span class="token operator">|</span> 右对齐 <span class="token operator">|</span> 居中对齐 <span class="token operator">|</span>
-<span class="token operator">|</span> <span class="token operator">:</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span><span class="token operator">|</span> <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">:</span> <span class="token operator">|</span> <span class="token operator">:</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">:</span> <span class="token operator">|</span>
-<span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span>
-<span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span> 单元格 <span class="token operator">|</span></code></pre>
-<p><code>:-</code>表示左对齐，<code>:-:</code>表示居中对齐,<code>:-</code>表示右对齐。</p>
+另外的一种赋权限的方式,用二进制方式
+r权限为 4
+w权限为 2
+x权限为 1
+chmod 754 ex1     等价于     chmod u=rwx,g=rx,o=r ex1</code></pre>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>参数</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>chown</td>
+<td></td>
+<td>chown centos:centos 1.txt</td>
+<td>改变文件的所有者或文件的组</td>
+</tr>
+<tr>
+<td></td>
+<td>-R</td>
+<td>chown -R root:root dir</td>
+<td>递归改变指定目录和其子目录</td>
+</tr>
+<tr>
+<td>chgrp</td>
+<td></td>
+<td>chgrp centos 1.txt</td>
+<td>改变文件所属的组</td>
+</tr>
+<tr>
+<td></td>
+<td>-R</td>
+<td>chgrp -R root dir</td>
+<td>递归改变指定目录和其子目录</td>
+</tr>
+</tbody></table>
+<h3 id="命令帮助"><a href="#命令帮助" class="headerlink" title="命令帮助"></a>命令帮助</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>参数</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>man</td>
+<td></td>
+<td>man ls</td>
+<td>查阅指定命令的手册</td>
+</tr>
+<tr>
+<td></td>
+<td>-f</td>
+<td>man -f ls</td>
+<td>查看该命令有那些章节</td>
+</tr>
+<tr>
+<td></td>
+<td>-S</td>
+<td>man -S 1 ls</td>
+<td>查看命令指定章节的帮助</td>
+</tr>
+<tr>
+<td>help</td>
+<td></td>
+<td>help cd</td>
+<td>shell内置命令帮助</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>ls –help</td>
+<td>另外一种关于help的用法</td>
+</tr>
+</tbody></table>
+<h3 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>参数</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ps</td>
+<td></td>
+<td>ps</td>
+<td>报告程序的状况</td>
+</tr>
+<tr>
+<td></td>
+<td>a u x</td>
+<td>ps aux</td>
+<td>a 显示所有终端机下执行的程序，u 面向用户的格式，x 显示所有非控制终端的进程信息</td>
+</tr>
+<tr>
+<td></td>
+<td>-e -f</td>
+<td>ps -ef</td>
+<td>-e 此参数的效果和指定”A”参数相同，-f 显示进程的所有信息</td>
+</tr>
+<tr>
+<td>kill</td>
+<td></td>
+<td>kill （pid）</td>
+<td>删除执行中的程序或工作</td>
+</tr>
+<tr>
+<td></td>
+<td>-1 -9</td>
+<td>kill -9 (pid)</td>
+<td>-1，查看信号；-9，强制删除</td>
+</tr>
+<tr>
+<td>top</td>
+<td></td>
+<td>top</td>
+<td>动态的查看进程状态</td>
+</tr>
+<tr>
+<td>pstree</td>
+<td></td>
+<td>pstree</td>
+<td>以树形的方式查看进程</td>
+</tr>
+</tbody></table>
+<h3 id="压缩解压缩"><a href="#压缩解压缩" class="headerlink" title="压缩解压缩"></a>压缩解压缩</h3><pre class=" language-shell"><code class="language-shell">gizp     .gz 的压缩方式
+-num   调整解压速度
+    -1 or --fast 表示最快的压缩方法（低压缩比）
+    -9 or --best 表示最慢的压缩方法（高压缩比）
+-d 解压缩
+-r 递归
+zcat  不解压查看.gz文件的内容
+
+bzip2    .bz2 的压缩方式,无递归的方式
+-k 不删除源文件
+-d 解压缩
+bzcat  不解压查看.bz2文件的内容
+
+xz       .xz 的压缩方式,无递归的方式
+-d 解压缩
+-k 不删除源文件
+
+tar 打包
+-c 创建包
+-t 查看包中的文件
+-x 释放包
+-z .gz格式压缩包
+-j .bz2格式压缩包
+-J .xz格式压缩包
+-f 指定包名（带一个参数）
+-v 执行过程中显示提示信息
+-C 用于指定包解压缩释放的路径
+列子：(以哪种方式来压缩包的参数放第一个,剩下的的参数为三种cvf(创建)、tvf(查看)、xvf(释放))
+tar -zcvf t1.tar.gz 1.txt 2.txt 3.txt    把1.txt,2.txt,3.txt打包成t1.tar.gz并以.gz格式来压缩
+tar -tvf t1.tar.gz      查看t1.tar.gz 里的文件名
+tar -zxvf t1.tar.gz     以.gz格式来释放包t1.tar.gz</code></pre>
+<h3 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h3><pre class=" language-shell"><code class="language-shell">
+
+
+
+
+</code></pre>
 
                 
             </div>
@@ -469,7 +1136,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hai-chao.gitee.io/blog/blog/2021/01/12/markdown-xue-xi-ji-lu/">http://hai-chao.gitee.io/blog/blog/2021/01/12/markdown-xue-xi-ji-lu/</a>
+                    <a href="http://hai-chao.gitee.io/blog/blog/2021/07/03/linux-qi-mo-zhi-nan/">http://hai-chao.gitee.io/blog/blog/2021/07/03/linux-qi-mo-zhi-nan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -507,8 +1174,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">学习</span>
+                                <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
+                                    <span class="chip bg-color">总结</span>
                                 </a>
                             
                         </div>
@@ -678,62 +1345,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/blog/2021/01/14/wang-zhan-shou-lu/">
+                <a href="/blog/2021/07/03/linux-qi-mo-zhi-nan/">
                     <div class="card-image">
                         
                         
-                        <img src="/blog/medias/featureimages/15.jpg" class="responsive-img" alt="网站收录">
+                        <img src="/blog/medias/featureimages/0.jpg" class="responsive-img" alt="linux期末指南">
                         
-                        <span class="card-title">网站收录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-14
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            塔纳托斯
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
-                        <span class="chip bg-color">分享</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/blog/2021/01/12/markdown-xue-xi-ji-lu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/blog/medias/featureimages/10.jpg" class="responsive-img" alt="Markdown学习记录">
-                        
-                        <span class="card-title">Markdown学习记录</span>
+                        <span class="card-title">linux期末指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -744,7 +1367,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
                             </span>
                         <span class="publish-author">
                             
@@ -758,8 +1381,53 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
+                    <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/blog/2021/06/26/tu-xiang-qi-mo-zhi-nan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/blog/medias/featureimages/13.jpg" class="responsive-img" alt="图像期末指南">
+                        
+                        <span class="card-title">图像期末指南</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            塔纳托斯
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">总结</span>
                     </a>
                     
                 </div>

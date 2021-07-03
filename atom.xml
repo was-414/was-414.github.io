@@ -6,7 +6,7 @@
   <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
   
   <link href="http://hai-chao.gitee.io/blog/"/>
-  <updated>2021-06-26T14:17:55.311Z</updated>
+  <updated>2021-07-03T14:25:44.423Z</updated>
   <id>http://hai-chao.gitee.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux期末指南</title>
+    <link href="http://hai-chao.gitee.io/blog/2021/07/03/linux-qi-mo-zhi-nan/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/07/03/linux-qi-mo-zhi-nan/</id>
+    <published>2021-07-03T09:19:03.000Z</published>
+    <updated>2021-07-03T14:25:44.423Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;linux基本命令&quot;&gt;&lt;a href=&quot;#linux基本命令&quot; class=&quot;headerlink&quot; title=&quot;linux基本命令&quot;&gt;&lt;/a&gt;linux基本命令&lt;/h2&gt;&lt;p&gt;命令格式：命令 -选项 参数 （选项和参数可以为空）如：ls -la</summary>
+        
+      
+    
+    
+    
+    
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>图像期末指南</title>
