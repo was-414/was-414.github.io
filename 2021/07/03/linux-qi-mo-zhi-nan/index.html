@@ -371,7 +371,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.6k
+                    3.7k
                 </div>
                 
 
@@ -1358,7 +1358,13 @@ ex1
 与文件描述字有关的重定向
 系统为每个进程自动打开三个标准文件（即标准输入、标准输出和错误输出），其文件描述字分别为0，1和2
 标准错误输出也可重定向到一个文件中，其一般形式是：
-命令  2 > 文件名</code></pre>
+命令  2 > 文件名
+命令  2>> 文件名
+标准输出和标准错误输出可以重定向到同一个文件，一般形式是
+command  $>file
+或者为
+command > file  2>& 1
+&1表示标准输出的引用，所以2>&1是指把标准错误输出重定向到标准输出的引用，即也重定向到file</code></pre>
 <h4 id="注释、管道线、命令执行操作符"><a href="#注释、管道线、命令执行操作符" class="headerlink" title="注释、管道线、命令执行操作符"></a>注释、管道线、命令执行操作符</h4><pre class=" language-shell"><code class="language-shell">注释   #
 
 管道线 |
@@ -1614,6 +1620,155 @@ case $op in
 2) echo "good bye";;
 esac</code></pre>
 <h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><p>考试不考，略，以后补上。</p>
+<h2 id="系统及网络管理"><a href="#系统及网络管理" class="headerlink" title="系统及网络管理"></a>系统及网络管理</h2><h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><p>有三种方式，rpm、yum、源代码安装</p>
+<h4 id="rpm"><a href="#rpm" class="headerlink" title="rpm"></a>rpm</h4><pre class=" language-shell"><code class="language-shell">RPM 软件包通常具有类似zsh-5.0.2-33.el7.x86_64.rpm 的文件名
+
+安装
+rpm -ivh telnet-server-0.17-64.el7.x86_64.rpm 
+
+卸载
+rpm -e telnet-server
+注意卸载时写软件的名字，而不是有.rpm后缀的软件包文件的名字
+
+升级
+rpm -Uvh zsh-5.0.2-33.el7.x86_64.rpm
+
+查询
+rpm -qa   查询所有已安装的软件包
+rpm -q telnet-server  打印出telnet-server软件包的包名 ，版本号，和发行号</code></pre>
+<h4 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h4><pre class=" language-shell"><code class="language-shell">强大好用，会自动解决依赖问题
+
+yum -y install vsftpd (安装)
+yum -y remove vsftpd  (卸载)
+yum search vsftpd     (查找指定的软件包，可以模糊查询)</code></pre>
+<h4 id="源代码安装"><a href="#源代码安装" class="headerlink" title="源代码安装"></a>源代码安装</h4><pre class=" language-shell"><code class="language-shell">使用源代码安装需要先安装gcc等编译器
+yum groupinstall 'Development Tools'</code></pre>
+<p>按照步骤(一般步骤大体如此)</p>
+<p>1.安装gcc等编译器</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5HAUU.png"></p>
+<p>2.解压tar包</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5HXwO.png"></p>
+<p>3.进入目录，查看安装说明文件</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5H60L.png"></p>
+<p>4.执行configure脚本</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5HltH.png"></p>
+<p>5.make</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5H8If.png"></p>
+<p>6.make install</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5Hb68.png"></p>
+<p>7.help查看安装后的命令的用法</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5Hcxw.png"></p>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><h4 id="1-命令行方式"><a href="#1-命令行方式" class="headerlink" title="1.命令行方式"></a>1.命令行方式</h4><pre class=" language-shell"><code class="language-shell">Linux 的帐号信息存放在passwd 文件中
+root:x:0:0:administrator:/root:/bin/bash
+帐号信息，由7个部分组成，每个部分由“:”分隔：
+用户名:加密的口令或口令符:用户ID:组ID:真实姓名:用户主目录:用户shell
+表示root 用户的ID 号码为0，所属组ID 号码为0，真实姓名为administrator，主目录位于/root。shell 程序是/bin/bash，密码为口令符x，该口令符意味着口令是加密存放的，该加密后的密码存放在/etc/shadow 文件中
+
+useradd stu1     添加一个stu1用户
+userdel stu1     删除用户stu1(有 -r 参数表示递归删除)
+查看添加的用户在 /etc/passwd 
+groupadd class1  添加一个class1的组
+groupdel class1  删除组class1
+查看添加的组在  /etc/group
+
+改变帐号的信息
+usermod -L centos   锁定用户
+usermod -U centos   解锁用户
+
+修改用户的密码
+passwd stu1</code></pre>
+<h4 id="2-图形界面"><a href="#2-图形界面" class="headerlink" title="2.图形界面"></a>2.图形界面</h4><pre class=" language-shell"><code class="language-shell">用户管理器窗口。如果没有则先安装：yum install system-config-users</code></pre>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5ub4O.png"></p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uUuU.png"></p>
+<h3 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h3><pre class=" language-shell"><code class="language-shell">使用文件系统遵循的一般过程：分区、格式化、挂载</code></pre>
+<h4 id="添加虚拟硬盘"><a href="#添加虚拟硬盘" class="headerlink" title="添加虚拟硬盘"></a>添加虚拟硬盘</h4><p><img src="https://s3.jpg.cm/2021/07/06/I5uH88.png"></p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uSQe.png"></p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5ut9k.png"></p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uYSy.png"></p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uJki.png"></p>
+<h4 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h4><p>1.查看系统中的硬盘</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5umOR.png"></p>
+<p>2.查看硬盘分区</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5ukBt.png"></p>
+<p>3.创建主分区</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uFuC.png"></p>
+<p>4.创建扩展分区</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5ur3r.png"></p>
+<p>5.创建逻辑分区</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uER5.png"></p>
+<p>6.查看创建好的分区</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uwmu.png"></p>
+<p>7.保存退出</p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I5uv8z.png"></p>
+<h4 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h4><pre class=" language-shell"><code class="language-shell">使用mkfs 命令来格式化硬盘
+mkfs -t ext4 /dev/sdb1</code></pre>
+<h4 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h4><pre class=" language-shell"><code class="language-shell">mount   挂载创建的分区
+1.创建挂载目录
+mkdir /mnt/userfile
+2.使用mount 命令挂载刚刚创建的分区
+mount /dev/sdb1 /mnt/userfile
+3.输出mount查看挂载是否成功
+mount
+在文件最小面有 /dev/sdb1 on /mnt/userfile type ext4 (rw,relatime,seclabel,data=ordered) 表示成功
+
+自动挂载
+修改/etc/fstab文件，在最后一行添加:
+/dev/sdb1        /mnt/userfile        ext3               defaults                   0  0
+要挂载的分区名      要挂载的目录     挂载分区用的文件系统      挂载时的选项，采用默认值    备份和检查文件，默认两个0
+修改完成后重启计算机目录将自动挂载</code></pre>
+<h3 id="网络管理"><a href="#网络管理" class="headerlink" title="网络管理"></a>网络管理</h3><h4 id="1-命令行方式-1"><a href="#1-命令行方式-1" class="headerlink" title="1.命令行方式"></a>1.命令行方式</h4><pre class=" language-shell"><code class="language-shell">1.查看网络运行情况
+ifconfig
+说明:
+eth0:网络适配器（网卡）的网络接口，如果系统中有多个网卡，则以eth1、eth2…递增编号
+inet:网卡的IP地址
+mask:显示网卡的子网掩码
+
+2.为网络接口eth0配置IP地址
+ifconfig eth0 192.168.1.1(要配置成的IP地址)
+将网络接口eth0设置为动态获取IP地址
+ifconfig eth0 dynamic
+
+3.激活网络接口eth0
+ifconfig eth0 up
+关闭网络接口eth0
+ifconfig eth0 down
+
+4.为系统添加缺省网关192.168.1.254
+route add default gw 192.168.1.254</code></pre>
+<h4 id="2-直接修改配置文件"><a href="#2-直接修改配置文件" class="headerlink" title="2.直接修改配置文件"></a>2.直接修改配置文件</h4><pre class=" language-shell"><code class="language-shell">通过命令可以快捷地进行网络参数的配置，但系统重新启动后，所设置的网络参数将丢失。直接修改配置文件可以解决该问题
+
+该方法略</code></pre>
+<h4 id="3-图形界面"><a href="#3-图形界面" class="headerlink" title="3.图形界面"></a>3.图形界面</h4><pre class=" language-shell"><code class="language-shell">在图形界面下配置网络参数实际上是直接对配置文件进行修改
+
+为使得所做的改动生效，可以重启网络服务
+service network restart
+
+一组参考
+IP地址：192.168.53.x（x为1～253）
+子网掩码：255.255.255.0
+网关：192.168.53.254</code></pre>
+<p><img src="https://s3.jpg.cm/2021/07/06/I51TwR.png"></p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I51yGC.png"></p>
+<p><img src="https://s3.jpg.cm/2021/07/06/I519ct.png"></p>
+<h4 id="考试常考网络题"><a href="#考试常考网络题" class="headerlink" title="考试常考网络题"></a>考试常考网络题</h4><p>请写出你在机房里每次上机实验时都需要进行的<strong>配置网络的基本步骤</strong>，<strong>每个关键步骤请截图并配以说明</strong></p>
+<pre class=" language-shell"><code class="language-shell">这道题分步骤来回答
+
+1.选择连接方式
+可以选择NAT方式，也可以选择桥接的方式
+
+2.网络参数的配置（上面三种配置方法，如没有要求，推荐使用图形界面）
+选择NAT方式可以直接选择自动获取网络参数
+选择桥接方式要根据具体的网络环境设置，及IP和机房电脑同一个网段
+
+3.查看IP并测试连通性
+用到3条命令
+systemctl restart network
+ifconfig
+ping www.baidu.com
+
+4.客户端远程连接服务器
+用SecureCRT来远程连接虚拟机</code></pre>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>花了2，3天写完该指南，祝我在后天的linux考试中取得好的成绩，同时希望这份指南能帮助到有缘人。</p>
 
                 
             </div>
@@ -1952,7 +2107,7 @@ esac</code></pre>
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('22')) {
+        if (('' + selection).length < Number.parseInt('11')) {
             return;
         }
 
@@ -1992,8 +2147,6 @@ esac</code></pre>
 
 
 <!-- 代码块复制 -->
-
-<script type="text/javascript" src="/blog/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
@@ -2117,7 +2270,7 @@ esac</code></pre>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">26.9k</span>&nbsp;字
+                class="white-color">27k</span>&nbsp;字
             
             
             
