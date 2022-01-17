@@ -1,1353 +1,410 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 
-
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="塔纳托斯">
-    <meta name="description" content="一位御宅族的博客">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-
+    
     <title>塔纳托斯</title>
-    <link rel="icon" type="image/png" href="/blog/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
 
-    <link rel="stylesheet" type="text/css" href="/blog/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/blog/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/blog/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/blog/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/blog/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/blog/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/blog/css/my.css">
-
-    <script src="/blog/libs/jquery/jquery.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="一位御宅族的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="塔纳托斯">
+<meta property="og:url" content="http://hai-chao.gitee.io/blog/index.html">
+<meta property="og:site_name" content="塔纳托斯">
+<meta property="og:description" content="一位御宅族的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="塔纳托斯">
+<meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1642394713988">
+    
+    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1642394713988">
+    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1642394713988">
+    <link rel="stylesheet" href="/blog/css/style.css?v=1642394713988">
+     
+    
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/blog/atom.xml" title="塔纳托斯" type="application/atom+xml">
 <link rel="stylesheet" href="/blog/css/prism-tomorrow.css" type="text/css"></head>
 
-
-
-
-<body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/blog/" class="waves-effect waves-light">
-                    
-                    <img src="/blog/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">塔纳托斯</span>
-                </a>
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/blog/" title="塔纳托斯" class="mdui-btn mdui-btn-icon"><img src="./img/玖渚友.jpg" alt="塔纳托斯"></a>
             </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/blog/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/blog/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/blog/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/blog/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/blog/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/blog/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-</ul>
-
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/blog/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">塔纳托斯</div>
-        <div class="logo-desc">
-            
-            一位御宅族的博客
-            
         </div>
     </div>
-
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/blog/" title="塔纳托斯">
+            <img src="./img/玖渚友.jpg" alt="塔纳托斯" alt="塔纳托斯">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>24</div>
+        <div><span>标签</span>6</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple true" href="/blog/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/nexmoe/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
     
 
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/blog/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/blog/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/blog/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/blog/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/blog/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/blog/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        
-    </ul>
-</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/blog/tags/java/" style="font-size: 10px;">java</a> <a href="/blog/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/blog/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 15px;">学习</a> <a href="/blog/tags/%E6%80%BB%E7%BB%93/" style="font-size: 15px;">总结</a> <a href="/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a>
+    </div>
+    
+  </div>
 
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 塔纳托斯
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <section class="nexmoe-posts">
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="练习之RBAC简单权限" class="lazyload">
+                    <h1>练习之RBAC简单权限</h1>
+                </div>
+            
+        </a>
 
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2022年01月15日</a>
         </div>
 
-        
+        <article>
+            
+                <p>RBAC，Role-Based Access...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2022/01/11/23.shi-yong-js-fa-song-wang-luo-qing-qiu/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="使用js发送网络请求" class="lazyload">
+                    <h1>使用js发送网络请求</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2022年01月11日</a>
+        </div>
+
+        <article>
+            
+                <p>AJAX (<strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML（异步的 JavaScript 和...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/12/20/22.chu-ci-shi-yong-spring-boot/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="初次使用spring boot" class="lazyload">
+                    <h1>初次使用spring boot</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年12月20日</a>
+        </div>
+
+        <article>
+            
+                <p>前不久花3小时帮某某入门spring boot，后来自己又看了看，练了练，用spring boot初次做了一个web小小小练习，我想要把这个过程中遇到的我目前容易忘记的给记录下来。</p>
+<h2 id="pom依赖"><a href="#pom依赖"...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/12/17/21.wex5-jian-dan-lian-xi/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="wex5简单练习" class="lazyload">
+                    <h1>wex5简单练习</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年12月17日</a>
+        </div>
+
+        <article>
+            
+                <p>期末到来，总想留下点记录，于是乎，来了。</p>
+<h2 id="Wex5"><a href="#Wex5" class="headerlink"...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/07/03/20.linux-qi-mo-zhi-nan/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="linux期末指南" class="lazyload">
+                    <h1>linux期末指南</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年07月03日</a>
+        </div>
+
+        <article>
+            
+                <h2 id="linux基本命令"><a href="#linux基本命令" class="headerlink" title="linux基本命令"></a>linux基本命令</h2><p>命令格式：命令 -选项 参数 （选项和参数可以为空）如：ls -la...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/06/26/19.tu-xiang-qi-mo-zhi-nan/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="图像期末指南" class="lazyload">
+                    <h1>图像期末指南</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年06月26日</a>
+        </div>
+
+        <article>
+            
+                <h2 id="Matlab图像基础"><a href="#Matlab图像基础" class="headerlink" title="Matlab图像基础"></a>Matlab图像基础</h2><pre class=" language-matlab"><code...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/05/25/18.90-hou-xing-sheng-huo-tu-jian/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="90后性生活图鉴" class="lazyload">
+                    <h1>90后性生活图鉴</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年05月25日</a>
+        </div>
+
+        <article>
+            
+                <p>最近看到一篇不错的科普文，是关于性相关的科普。</p>
+<p>跳转链接为：<a...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/05/22/17.die-dao-de-wei-hai/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="跌倒的危害" class="lazyload">
+                    <h1>跌倒的危害</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年05月22日</a>
+        </div>
+
+        <article>
+            
+                <p>最近一阵因意外导致更新频率变慢（<del>话说没意外也会鸽的</del>），正如标题所述，本文将科普<strong>跌倒的危害</strong>。</p>
+<h2 id="我的经历"><a href="#我的经历" class="headerlink"...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/04/24/16.usb-ke-pu/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="USB科普" class="lazyload">
+                    <h1>USB科普</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年04月24日</a>
+        </div>
+
+        <article>
+            
+                <p>USB，<strong>U</strong>niversal <strong>S</strong>erial...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/03/28/15.21y3-jin-kuang-zong-jie/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="21Y3近况总结" class="lazyload">
+                    <h1>21Y3近况总结</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年03月28日</a>
+        </div>
+
+        <article>
+            
+                <p>还有3天3月就结束了，在这个时间段里属实不太行（<del>学习学到自闭是种什么感觉</del>）。先说说目前的自学成果，在这一个月里，重新学习了HTML，CSS。学完之后去了解了一下HTML5和CSS3的内容，进而去攻取JS，顺着JS又学习了html...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/03/14/14.kou-tu-zhi-nan/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="扣图指南" class="lazyload">
+                    <h1>扣图指南</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年03月14日</a>
+        </div>
+
+        <article>
+            
+                <p>今天闲来无事，扣了扣图，一共扣了四张图，共计时间50分钟。本人使用的是PS（并未系统学习过），用的是钢笔扣图（<del>今天才学的</del>），之前只会用快速选择等等方法。下图是今日的成果：</p>
+<p><img...
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/blog/2021/03/08/9.mysql-zi-xue-bi-ji/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="Mysql自学笔记" class="lazyload">
+                    <h1>Mysql自学笔记</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年03月08日</a>
+        </div>
+
+        <article>
+            
+                <h2 id="数据库的基本操作"><a href="#数据库的基本操作" class="headerlink" title="数据库的基本操作"></a>数据库的基本操作</h2><pre class=" language-mysql"><code...
+            
+        </article>
+    </div>
+    
+</section>
+
+    <nav class="nexmoe-page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="nexmoefont icon-right"></i></a>
     </nav>
-
-</header>
-
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                塔纳托斯
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+  
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
             </div>
         </div>
     </div>
-</div>
+    
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/blog/js/app.js?v=1642394713989"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/blog/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#articles" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-            </div>
-            <div class="cover-social-link">
-
-
-    <a href="mailto:1192728352@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192728352" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192728352" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-</div>
-        </div>
-    </div>
-
-    
-</div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
-
-<main class="content">
-
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;生之感
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            $今日事，今日毕，一鼓作气，行动起来$
-$人和人的悲欢并不相通，别擅自认为这是他所需$
-$约定之事务必完成，非己所能三思而定$
-
-        </div>
-    </div>
-</div>
-
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
     
 
-    
 
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2022/01/11/23.shi-yong-js-fa-song-wang-luo-qing-qiu/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/16.jpg" class="responsive-img" alt="使用js发送网络请求">
-                            
-                            <span class="card-title">使用js发送网络请求</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                AJAX (Asynchronous JavaScript And XML（异步的 JavaScript 和 XML）
-这个技术可以使用js执行异步网络请求
-测试接口随便找了个java web的练习项目，先看看po对象
-public cla
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/12/20/22.chu-ci-shi-yong-spring-boot/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/16.jpg" class="responsive-img" alt="初次使用spring boot">
-                            
-                            <span class="card-title">初次使用spring boot</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前不久花3小时帮某某入门spring boot，后来自己又看了看，练了练，用spring boot初次做了一个web小小小练习，我想要把这个过程中遇到的我目前容易忘记的给记录下来。
-pom依赖首先在idea中建一个maven项目，不需要选啥
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">学习</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/12/17/21.wex5-jian-dan-lian-xi/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/13.jpg" class="responsive-img" alt="wex5简单练习">
-                            
-                            <span class="card-title">wex5简单练习</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                期末到来，总想留下点记录，于是乎，来了。
-Wex5wex5这个开发工具主要是以点击或是拖拽组件的方式来添加组件，因此，熟悉各个组件的功能和具体使用场景对于开发来说就显得至关重要。组件呢我就不详细介绍了，说不定以后都不会用这个软件。在下就以练
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-17
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/07/03/20.linux-qi-mo-zhi-nan/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/0.jpg" class="responsive-img" alt="linux期末指南">
-                            
-                            <span class="card-title">linux期末指南</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                linux基本命令命令格式：命令 -选项 参数 （选项和参数可以为空）如：ls -la /usr
-
-
-
-命令
-参数
-示例
-说明
-
-
-
-reboot
-
-reboot
-重启
-
-
-init 0
-
-init 0
-关机
-
-
-shutdown -h n
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/06/26/19.tu-xiang-qi-mo-zhi-nan/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/13.jpg" class="responsive-img" alt="图像期末指南">
-                            
-                            <span class="card-title">图像期末指南</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Matlab图像基础% 读图片
-% 方法1   '路径'
-im=imread('路径');
-% 方法2
-[filename,filepath]=uigetfile('*.*');
-im=imread([filepath,filename])
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/05/25/18.90-hou-xing-sheng-huo-tu-jian/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/6.jpg" class="responsive-img" alt="90后性生活图鉴">
-                            
-                            <span class="card-title">90后性生活图鉴</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                最近看到一篇不错的科普文，是关于性相关的科普。
-跳转链接为：https://www.163.com/dy/article/G4E1ALFM0518BOJ3.html#
-主体内容
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
-                            <span class="chip bg-color">分享</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/05/22/17.die-dao-de-wei-hai/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/16.jpg" class="responsive-img" alt="跌倒的危害">
-                            
-                            <span class="card-title">跌倒的危害</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                最近一阵因意外导致更新频率变慢（话说没意外也会鸽的），正如标题所述，本文将科普跌倒的危害。
-我的经历记得那是要放51劳动假的前几日，地面因昨晚下了雨是湿的，走的地方具有一定的坡度，倒霉的我经过时踩滑了，向后跌倒了，无意识下用手去撑地，结果就
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
-                            <span class="chip bg-color">分享</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/04/24/16.usb-ke-pu/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/17.jpg" class="responsive-img" alt="USB科普">
-                            
-                            <span class="card-title">USB科普</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                USB，Universal Serial Bus，通用串行总线，是连接计算机系统与外部设备的一种串口总线标准，被广泛的应用于个人电脑和移动设备等通讯产品。
-针对USB的简单科普首先，目前常用的USB规范为USB2.0（这个已经落后了）、US
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E5%88%86%E4%BA%AB/">
-                            <span class="chip bg-color">分享</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/03/28/15.21y3-jin-kuang-zong-jie/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/21.jpg" class="responsive-img" alt="21Y3近况总结">
-                            
-                            <span class="card-title">21Y3近况总结</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                还有3天3月就结束了，在这个时间段里属实不太行（学习学到自闭是种什么感觉）。先说说目前的自学成果，在这一个月里，重新学习了HTML，CSS。学完之后去了解了一下HTML5和CSS3的内容，进而去攻取JS，顺着JS又学习了html DOM，J
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-28
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/03/14/14.kou-tu-zhi-nan/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/3.jpg" class="responsive-img" alt="扣图指南">
-                            
-                            <span class="card-title">扣图指南</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                今天闲来无事，扣了扣图，一共扣了四张图，共计时间50分钟。本人使用的是PS（并未系统学习过），用的是钢笔扣图（今天才学的），之前只会用快速选择等等方法。下图是今日的成果：
-
-在今天的扣图之旅中，学习到的内容为：钢笔扣图，按键盘上P键将工具变
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">学习</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/03/08/9.mysql-zi-xue-bi-ji/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/2.jpg" class="responsive-img" alt="Mysql自学笔记">
-                            
-                            <span class="card-title">Mysql自学笔记</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                数据库的基本操作在cmd(以管理员身份运行)中:
-开启服务
-net start mysql57
-停止服务
-net stop mysql57
-#mysql57是下载mysql时的默认服务名
-
-显示数据库
-show databases;
-
-创建
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">学习</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/blog/2021/02/28/13.21y1-2-you-xi-zong-jie/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/blog/medias/featureimages/5.jpg" class="responsive-img" alt="21Y1-2游戏总结">
-                            
-                            <span class="card-title">21Y1-2游戏总结</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                如标题所言，本篇文章是对于我在2021年1至2月所游玩的游戏的一个总结。为什么要做一个总结呢？我想记录一下在这个时间段里我游玩的游戏以及这些游戏带给我的感动。
-HADES作为2020年的年度最佳独立游戏，由制作过《堡垒》《晶体管》的制作组S
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                塔纳托斯
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/">
-                            <span class="chip bg-color">游后感</span>
-                        </a>
-                        
-                        <a href="/blog/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
-
-</main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a class="left btn-floating btn-large disabled">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a href="/blog/page/2/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2021-2022</span>
-            
-            <span id="year">2021</span>
-            <a href="/blog/about" target="_blank">塔纳托斯</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.7k</span>&nbsp;字
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2021";
-                    var startMonth = "1";
-                    var startDate = "11";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
-                }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-
-
-    <a href="mailto:1192728352@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192728352" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192728352" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-</div>
-    </div>
-</footer>
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/blog/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-    <script src="/blog/libs/materialize/materialize.min.js"></script>
-    <script src="/blog/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/blog/libs/aos/aos.js"></script>
-    <script src="/blog/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/blog/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/blog/js/matery.js"></script>
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    
-	<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-	<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script src="/blog/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/blog/libs/others/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-    
-
-	
-    
-
-    
-
-    
-
-    
-    <script src="/blog/libs/instantpage/instantpage.js" type="module"></script>
-    
 
 </body>
 
