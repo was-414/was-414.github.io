@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>spring boot集成swagger - 塔纳托斯</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="随着前后端分离架构的流行，RESTful API的使用也越来越多，对于前端和后端的联系自然是API文档，而Swagger 框架是一个用于生成、描述、调用和可视化 RESTful 风格的 Web 服务，它可以轻松的集成到spring boot中 Swagger2使用 引入依赖  &lt;dependency&gt;     &lt;groupId&gt;com.spring4all&lt;&#x2F;groupId&gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring boot集成swagger">
+<meta property="og:url" content="http://hai-chao.gitee.io/blog/2022/02/03/26.spring-boot-ji-cheng-swagger/index.html">
+<meta property="og:site_name" content="塔纳托斯">
+<meta property="og:description" content="随着前后端分离架构的流行，RESTful API的使用也越来越多，对于前端和后端的联系自然是API文档，而Swagger 框架是一个用于生成、描述、调用和可视化 RESTful 风格的 Web 服务，它可以轻松的集成到spring boot中 Swagger2使用 引入依赖  &lt;dependency&gt;     &lt;groupId&gt;com.spring4all&lt;&#x2F;groupId&gt;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-1.png">
+<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-2.png">
+<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-3.png">
+<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-4.png">
+<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-5.png">
+<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-6.png">
+<meta property="article:published_time" content="2022-02-03T08:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-03T08:24:27.625Z">
+<meta property="article:author" content="塔纳托斯">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-1.png">
+    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1643876709933">
+    
+    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1643876709933">
+    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1643876709933">
+    <link rel="stylesheet" href="/blog/css/style.css?v=1643876709933">
+     
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/blog/atom.xml" title="塔纳托斯" type="application/atom+xml">
+<link rel="stylesheet" href="/blog/css/prism-tomorrow.css" type="text/css"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/blog/" title="塔纳托斯" class="mdui-btn mdui-btn-icon"><img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/blog/" title="塔纳托斯">
+            <img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯" alt="塔纳托斯">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>26</div>
+        <div><span>标签</span>6</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/nexmoe/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/blog/tags/java/" style="font-size: 10px;">java</a> <a href="/blog/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/blog/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">学习</a> <a href="/blog/tags/%E6%80%BB%E7%BB%93/" style="font-size: 13.33px;">总结</a> <a href="/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 塔纳托斯
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover"> 
+              <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="spring boot集成swagger" class="lazyload">
+              <h1>spring boot集成swagger</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年02月03日</a>
+</div>
+
+      
+
+      <p>随着前后端分离架构的流行，RESTful API的使用也越来越多，对于前端和后端的联系自然是API文档，而<strong>Swagger</strong> 框架是一个用于生成、描述、调用和可视化 RESTful 风格的 Web 服务，它可以轻松的集成到spring boot中</p>
+<h2 id="Swagger2"><a href="#Swagger2" class="headerlink" title="Swagger2"></a>Swagger2</h2><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
+<li>引入依赖</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+    <span class="token operator">&lt;</span>groupId<span class="token operator">></span>com<span class="token punctuation">.</span>spring4all<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>swagger<span class="token operator">-</span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+    <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">1.9</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">.</span>RELEASE<span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></code></pre>
+<p>使用别人整合Swagger的starter，在Maven仓库中1.9.0使用人数最多，<del>自己用了下最新的2.0以上，文档页面的请求404</del></p>
+<ul>
+<li>在spring boot主启动程序类加注解<code>@EnableSwagger2</code></li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@EnableSwagger2</span>
+<span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>Application<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>加注解<code>@EnableSwagger2Doc</code>会报错，网上查询得出的结论是guava版本问题，目前该问题未解决</p>
+<ul>
+<li>swagger属性配置<ul>
+<li><code>swagger.title</code>：标题</li>
+<li><code>swagger.description</code>：描述</li>
+<li><code>swagger.version</code>：版本</li>
+<li><code>swagger.license</code>：许可证</li>
+<li><code>swagger.licenseUrl</code>：许可证URL</li>
+<li><code>swagger.termsOfServiceUrl</code>：服务条款URL</li>
+<li><code>swagger.contact.name</code>：维护人</li>
+<li><code>swagger.contact.url</code>：维护人URL</li>
+<li><code>swagger.contact.email</code>：维护人email</li>
+<li><code>swagger.base-package</code>：swagger扫描的基础包，默认：全扫描</li>
+<li><code>swagger.base-path</code>：需要处理的基础URL规则，默认：/**</li>
+</ul>
+</li>
+</ul>
+<p>先不进行配置，采用swagger的属性的默认值，更多的配置属性请看：<a target="_blank" rel="noopener" href="https://github.com/SpringForAll/spring-boot-starter-swagger">https://github.com/SpringForAll/spring-boot-starter-swagger</a></p>
+<ul>
+<li>启动应用，访问<code>http://localhost:8080/swagger-ui.html</code>，没啥问题就应该能看到接口文档页面</li>
+</ul>
+<h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><p>针对pojo对象</p>
+<ul>
+<li><strong><code>@ApiModel</code>：</strong> 描述<code>POJO</code>对象</li>
+<li><strong><code>@ApiModelProperty</code>：</strong> 描述<code>POJO</code>对象中的属性值</li>
+</ul>
+<p>针对API接口</p>
+<ul>
+<li><strong><code>@Api</code>：</strong> 描述<code>Controller</code></li>
+<li><strong><code>@ApiIgnore</code>：</strong> 忽略当前<code>Controller</code>，指不对当前类做扫描</li>
+<li><strong><code>@ApiOperation</code>：</strong> 描述<code>Controller</code>类中的<code>method</code>接口</li>
+<li><strong><code>@ApiParam</code>：</strong> 单个参数描述，与<code>@ApiImplicitParam</code>不同的是，他是写在参数左侧的。如**<code>@ApiParam(name = &quot;username&quot;,value = &quot;用户名&quot;) String username</code>**</li>
+<li><strong><code>@ApiImplicitParam</code>：</strong> 描述<code>method</code>接口中单个参数信息</li>
+<li><strong><code>@ApiImplicitParams</code>：</strong> 描述<code>method</code>接口中多个参数信息</li>
+<li><strong><code>@ApiResponse</code>：</strong> 描述一个HTTP响应</li>
+<li><strong><code>@ApiResponses</code>：</strong> 描述多个HTTP响应</li>
+<li><strong><code>@ApiError</code>：</strong> 接口错误所返回的信息</li>
+</ul>
+<p>对之前的RESTful风格做的练习添加一下swagger的注解</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@ApiModel</span><span class="token punctuation">(</span>description <span class="token operator">=</span> <span class="token string">"用户实体"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@ApiModelProperty</span><span class="token punctuation">(</span><span class="token string">"用户id"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> Integer id<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@ApiModelProperty</span><span class="token punctuation">(</span><span class="token string">"用户名"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String username<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@ApiModelProperty</span><span class="token punctuation">(</span><span class="token string">"用户密码"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/* 省略 getter and setter */</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token string">"用户管理"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"users"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span><span class="token punctuation">(</span>required <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> UserMapper userMapper<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"获取用户列表"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> List<span class="token operator">&lt;</span>User<span class="token operator">></span> <span class="token function">getUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">getAllUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@ApiImplicitParam</span><span class="token punctuation">(</span>paramType <span class="token operator">=</span> <span class="token string">"path"</span><span class="token punctuation">,</span> dataType <span class="token operator">=</span> <span class="token string">"int"</span><span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">"id"</span><span class="token punctuation">,</span> value <span class="token operator">=</span> <span class="token string">"用户编号"</span><span class="token punctuation">,</span> required <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span> example <span class="token operator">=</span> <span class="token string">"1"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"获取用户信息"</span><span class="token punctuation">,</span> notes <span class="token operator">=</span> <span class="token string">"根据id来获取用户信息"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/{id}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> User <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">getUserById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"创建用户"</span><span class="token punctuation">,</span> notes <span class="token operator">=</span> <span class="token string">"根据User对象来创建用户"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> User user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">addUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"更新用户信息"</span><span class="token punctuation">,</span> notes <span class="token operator">=</span> <span class="token string">"根据User对象的id来更新用户信息"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@PutMapping</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">updateUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> User user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">updateUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"删除用户"</span><span class="token punctuation">,</span> notes <span class="token operator">=</span> <span class="token string">"根据id删除用户"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@DeleteMapping</span><span class="token punctuation">(</span><span class="token string">"/{id}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">deleteUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">deleteUserById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-1.png"></p>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>swagger提供调试接口的功能，点击具体接口后点击Try it out，若需要Parameters（参数），在输入框中输入具体参数，之后点击Execute，最后看Response body是否返回预定结果值</p>
+<h3 id="接口分组与排序"><a href="#接口分组与排序" class="headerlink" title="接口分组与排序"></a>接口分组与排序</h3><p><code>@Api</code>注解中属性tags的值为一个分组，同时tags属性是个<strong>数组</strong>类型，及可以将多个接口<strong>合并起来</strong>，对于<code>@ApiOperation</code>注解中的<code>tags</code>属性可以做到更细的接口分类</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"学生管理"</span><span class="token punctuation">,</span><span class="token string">"教学管理"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"students"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentController</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 接口方法 */</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"教师管理"</span><span class="token punctuation">,</span><span class="token string">"教学管理"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"teachers"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TeacherController</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 接口方法 */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>上述代码段产生的API文档在学生管理分组中有StudentController的所有接口方法，在教师管理分组中有TeacherController的所有接口方法，在教学管理分组中有StudentController和TeacherController中的所有接口方法</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"学生管理"</span><span class="token punctuation">,</span><span class="token string">"教学管理"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"students"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentController</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 接口方法 */</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"教师管理"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"teachers"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TeacherController</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 接口方法 */</span>
+    <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"获取教师列表"</span><span class="token punctuation">,</span> tags <span class="token operator">=</span> <span class="token string">"教学管理"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> List<span class="token operator">&lt;</span>Teacher<span class="token operator">></span> <span class="token function">getTeachers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> TeacherMapper<span class="token punctuation">.</span><span class="token function">getAllTeacher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"创建教师"</span><span class="token punctuation">,</span> notes <span class="token operator">=</span> <span class="token string">"根据Teacher对象来创建教师"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">addTeacher</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> Teacher teacher<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> TeacherMapper<span class="token punctuation">.</span><span class="token function">addTeacher</span><span class="token punctuation">(</span>teacher<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>上述代码段产生的API文档中教学管理分组中有StudentController中所有接口方法和TeacherController中的getTeachers接口方法</p>
+<hr>
+<p>对于<strong>分组的排序</strong>（对Tags排序），Swagger只提供了一种方法alpha，按照字母顺序排列，那么我们怎么实现对分组进行排序？根据别人的经验：按照使用方式的定义来排序，比如给Tags加编号</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"1-学生管理"</span><span class="token punctuation">,</span><span class="token string">"3-教学管理"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"students"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentController</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 接口方法 */</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"2-教师管理"</span><span class="token punctuation">,</span><span class="token string">"3-教学管理"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"teachers"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TeacherController</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 接口方法 */</span>
+<span class="token punctuation">}</span></code></pre>
+<p>对于<strong>同一分组内各个接口先后顺序的排序</strong>，由于本次记录中使用的是别人整合的Starter，直接加配置</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">swagger.ui-config.operations-sorter</span><span class="token punctuation">=</span><span class="token attr-value">alpha</span></code></pre>
+<p>该属性值有<code>alpha</code>和<code>method</code>（默认值是alpha），两个值分别表示按字母表排序；按方法定义顺序排序</p>
+<p>对于<strong>实体的参数的排序</strong>，实体参数也是默认按照字母表排序，想要自定义排序可以对<code>@ApiModelProperty</code>注解中<code>position</code>属性赋值</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@ApiModel</span><span class="token punctuation">(</span>description <span class="token operator">=</span> <span class="token string">"用户实体"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@ApiModelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"用户id"</span><span class="token punctuation">,</span> position <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> Integer id<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@ApiModelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"用户名"</span><span class="token punctuation">,</span> position <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String username<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@ApiModelProperty</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"用户密码"</span><span class="token punctuation">,</span> position <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">/* 省略 getter and setter */</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="生成静态文档"><a href="#生成静态文档" class="headerlink" title="生成静态文档"></a>生成静态文档</h3><p>每次查看Swagger文档都需要启动应用，而在有些情况下，我们只需要提供<strong>静态文档</strong>给其他成员时，可以使用<strong>Swagger2Markup</strong>来生成静态文档</p>
+<p>使用<strong>Swagger2Markup</strong>来生成静态文档有两种方式</p>
+<ol>
+<li>写单元测试用例来生成</li>
+<li>通过Maven插件来生成</li>
+</ol>
+<p>那么依照简单原则，在本次记录中就通过Maven插件来生成</p>
+<ul>
+<li>首先在pom文件中加入插件</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- swagger2markup插件 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>io.github.swagger2markup<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>swagger2markup-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.3.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swaggerInput</span><span class="token punctuation">></span></span>http://localhost:8080/v2/api-docs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swaggerInput</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>outputDir</span><span class="token punctuation">></span></span>src/docs/asciidoc/generated<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>outputDir</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>config</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.markupLanguage</span><span class="token punctuation">></span></span>ASCIIDOC<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.markupLanguage</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>config</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">></span></span>
+
+<span class="token comment" spellcheck="true">&lt;!-- 调整swagger2markup插件仓库的坐标 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>spring-plugins-release<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>https://repo.spring.io/plugins-release<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">></span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">></span></span></code></pre>
+<ul>
+<li>在maven的settings.xml中加入一个镜像</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>nexus-aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">></span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>Nexus aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>https://maven.aliyun.com/repository/jcenter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">></span></span></code></pre>
+<ul>
+<li>先启动应用，再点击swagger2markup插件</li>
+</ul>
+<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-2.png"></p>
+<ul>
+<li>将生成的AsciiDoc文档转成Html</li>
+</ul>
+<p>先在pom中加入插件</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- AsciiDoc转成Html --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.asciidoctor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>asciidoctor-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.5.6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sourceDirectory</span><span class="token punctuation">></span></span>src/docs/asciidoc/generated<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sourceDirectory</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>outputDirectory</span><span class="token punctuation">></span></span>src/docs/asciidoc/html<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>outputDirectory</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>backend</span><span class="token punctuation">></span></span>html5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>backend</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>attributes</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!--导航栏在左--></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>toc</span><span class="token punctuation">></span></span>left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>toc</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!--显示层级数--></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>toclevels</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>toclevels</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!--自动打数字序号--></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sectnums</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sectnums</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>attributes</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span></code></pre>
+<p>点击插件的<code>asciidoctor:process-asciidoc</code>命令</p>
+<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-3.png"></p>
+<p>除了将AsciiDoc转成Html外，也可以将AsciiDoc转成pdf，通过修改插件的<code>&lt;backend&gt;html5&lt;/backend&gt;</code>为<code>&lt;backend&gt;pdf&lt;/backend&gt;</code></p>
+<p>后再引入<code>asciidoctorj-pdf</code>的依赖就可以了</p>
+<ul>
+<li>生成单一文档</li>
+</ul>
+<p>上述操作之后生成的文档有4个，是分散的，那么怎么将其合并：将swagger2markup插件中的<code>&lt;outputDir&gt;src/docs/asciidoc/generated&lt;/outputDir&gt;</code>改成<code>&lt;outputFile&gt;src/docs/asciidoc/generated/all&lt;/outputFile&gt;</code></p>
+<p>修改依赖后点击重新导入依赖，在生成文档</p>
+<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-4.png"></p>
+<p>点击all.html可以看到静态文档，但默认文档是英文，可以在swagger2markup插件中添加配置</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- swagger2markup插件 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>io.github.swagger2markup<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>swagger2markup-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.3.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swaggerInput</span><span class="token punctuation">></span></span>http://localhost:8080/v2/api-docs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swaggerInput</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>outputFile</span><span class="token punctuation">></span></span>src/docs/asciidoc/generated/all<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>outputFile</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>config</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.markupLanguage</span><span class="token punctuation">></span></span>ASCIIDOC<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.markupLanguage</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.outputLanguage</span><span class="token punctuation">></span></span>ZH<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.outputLanguage</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.generatedExamplesEnabled</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.generatedExamplesEnabled</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.inlineSchemaEnabled</span><span class="token punctuation">></span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.inlineSchemaEnabled</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.pathsGroupedBy</span><span class="token punctuation">></span></span>TAGS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.pathsGroupedBy</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>config</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span></code></pre>
+<ul>
+<li><code>swagger2markup.markupLanguage</code>：输出格式，比如：AsciiDoc、Markdown、Confluence</li>
+<li><code>swagger2markup.outputLanguage</code>：生成文档的语言类型：如中文（ZH），默认英语（EN）</li>
+<li><code>swagger2markup.generatedExamplesEnabled</code>：指定是否应该生成HTTP请求和响应示例，默认false</li>
+<li><code>swagger2markup.inlineSchemaEnabled</code>：是否启用参数内联</li>
+<li><code>swagger2markup.pathsGroupedBy</code>：api排序规则，一般用tags排序</li>
+</ul>
+<h2 id="Swagger2依赖引入汇总"><a href="#Swagger2依赖引入汇总" class="headerlink" title="Swagger2依赖引入汇总"></a>Swagger2依赖引入汇总</h2><p>上述Swagger2记录中的依赖引入有些分散，在此汇总一下</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- 整合的swagger starter --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.spring4all<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>swagger-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.9.0.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- swagger2markup插件 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>io.github.swagger2markup<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>swagger2markup-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.3.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swaggerInput</span><span class="token punctuation">></span></span>http://localhost:8080/v2/api-docs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swaggerInput</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>outputFile</span><span class="token punctuation">></span></span>src/docs/asciidoc/generated/all<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>outputFile</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>config</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.markupLanguage</span><span class="token punctuation">></span></span>ASCIIDOC<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.markupLanguage</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.outputLanguage</span><span class="token punctuation">></span></span>ZH<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.outputLanguage</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.generatedExamplesEnabled</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.generatedExamplesEnabled</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.inlineSchemaEnabled</span><span class="token punctuation">></span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.inlineSchemaEnabled</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>swagger2markup.pathsGroupedBy</span><span class="token punctuation">></span></span>TAGS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>swagger2markup.pathsGroupedBy</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>config</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- AsciiDoc转成Html --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.asciidoctor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>asciidoctor-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.5.6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sourceDirectory</span><span class="token punctuation">></span></span>src/docs/asciidoc/generated<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sourceDirectory</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>outputDirectory</span><span class="token punctuation">></span></span>src/docs/asciidoc/html<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>outputDirectory</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>backend</span><span class="token punctuation">></span></span>html5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>backend</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>attributes</span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!--导航栏在左--></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>toc</span><span class="token punctuation">></span></span>left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>toc</span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!--显示层级数--></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>toclevels</span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>toclevels</span><span class="token punctuation">></span></span>
+                <span class="token comment" spellcheck="true">&lt;!--自动打数字序号--></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sectnums</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sectnums</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>attributes</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">></span></span>
+
+<span class="token comment" spellcheck="true">&lt;!-- 调整swagger2markup插件仓库的坐标 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepositories</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pluginRepository</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>spring-plugins-release<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>https://repo.spring.io/plugins-release<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">></span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepository</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pluginRepositories</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="Swagger3"><a href="#Swagger3" class="headerlink" title="Swagger3"></a>Swagger3</h2><h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><ul>
+<li>引入依赖</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>io.springfox<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>springfox-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
+<ul>
+<li>swagger配置</li>
+</ul>
+<p>先采用默认值，不进行配置</p>
+<ul>
+<li>加注解<code>@EnableOpenApi</code></li>
+<li>启动应用，访问<code>http://localhost:8080/swagger-ui</code></li>
+</ul>
+<p>可以看到文档页面访问成功，对于swagger3很轻松的就集成成功，并且使用也十分简单</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>先不对全局进行配置，先配置一些简单的，目前这些够用</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Swagger3Config</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> Docket <span class="token function">createRestApi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Docket</span><span class="token punctuation">(</span>DocumentationType<span class="token punctuation">.</span>OAS_30<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">apiInfo</span><span class="token punctuation">(</span><span class="token function">apiInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">apis</span><span class="token punctuation">(</span>RequestHandlerSelectors<span class="token punctuation">.</span><span class="token function">any</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">paths</span><span class="token punctuation">(</span>PathSelectors<span class="token punctuation">.</span><span class="token function">any</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> ApiInfo <span class="token function">apiInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ApiInfoBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">title</span><span class="token punctuation">(</span><span class="token string">"Swagger3接口文档"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">"疑问请咨询服务开发者haichao"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">contact</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Contact</span><span class="token punctuation">(</span><span class="token string">"haichao"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">"1.0"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="Knife4j"><a href="#Knife4j" class="headerlink" title="Knife4j"></a>Knife4j</h3><p>Knife4j是为Java MVC框架集成Swagger生成Api文档的增强解决方案，前身是swagger-bootstrap-ui，取名knife4j是希望她能像一把匕首一样小巧，轻量，并且功能强悍</p>
+<p>下面来看看怎么使用</p>
+<ul>
+<li>引入依赖</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.github.xiaoymin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>knife4j-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.0.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
+<ul>
+<li>访问<code>http://localhost:8080/doc.html</code></li>
+</ul>
+<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-5.png"></p>
+<h3 id="利用Knife4j生成离线文档"><a href="#利用Knife4j生成离线文档" class="headerlink" title="利用Knife4j生成离线文档"></a>利用Knife4j生成离线文档</h3><p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-6.png"></p>
+<h3 id="Swagger3全局参数配置"><a href="#Swagger3全局参数配置" class="headerlink" title="Swagger3全局参数配置"></a>Swagger3全局参数配置</h3><p>Swagger3中增加了一些全局参数的配置，如生成全局的参数和通用的响应信息，目前水平还用不上，故先略过</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>除了Swagger外，还有更多API管理系统，如<strong>YApi</strong>、<strong>eolinker</strong>、<strong>ShowDoc</strong> 等等，具体选择需要根据团队需求出发</p>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>塔纳托斯<br>
+        <strong>本文链接：</strong><a href="http://hai-chao.gitee.io/blog/2022/02/03/26.spring-boot-ji-cheng-swagger/" title="http:&#x2F;&#x2F;hai-chao.gitee.io&#x2F;blog&#x2F;2022&#x2F;02&#x2F;03&#x2F;26.spring-boot-ji-cheng-swagger&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;hai-chao.gitee.io&#x2F;blog&#x2F;2022&#x2F;02&#x2F;03&#x2F;26.spring-boot-ji-cheng-swagger&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/blog/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Swagger2"><span class="toc-number">1.</span> <span class="toc-text">Swagger2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.2.</span> <span class="toc-text">注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95"><span class="toc-number">1.3.</span> <span class="toc-text">调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%88%86%E7%BB%84%E4%B8%8E%E6%8E%92%E5%BA%8F"><span class="toc-number">1.4.</span> <span class="toc-text">接口分组与排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E6%A1%A3"><span class="toc-number">1.5.</span> <span class="toc-text">生成静态文档</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swagger2%E4%BE%9D%E8%B5%96%E5%BC%95%E5%85%A5%E6%B1%87%E6%80%BB"><span class="toc-number">2.</span> <span class="toc-text">Swagger2依赖引入汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swagger3"><span class="toc-number">3.</span> <span class="toc-text">Swagger3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-number">3.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Knife4j"><span class="toc-number">3.3.</span> <span class="toc-text">Knife4j</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8Knife4j%E7%94%9F%E6%88%90%E7%A6%BB%E7%BA%BF%E6%96%87%E6%A1%A3"><span class="toc-number">3.4.</span> <span class="toc-text">利用Knife4j生成离线文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Swagger3%E5%85%A8%E5%B1%80%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE"><span class="toc-number">3.5.</span> <span class="toc-text">Swagger3全局参数配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/blog/js/app.js?v=1643876709960"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+
+    
+
+
+
+
+
+</body>
+
+</html>
