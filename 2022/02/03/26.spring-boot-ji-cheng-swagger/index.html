@@ -19,23 +19,23 @@
 <meta property="og:site_name" content="塔纳托斯">
 <meta property="og:description" content="随着前后端分离架构的流行，RESTful API的使用也越来越多，对于前端和后端的联系自然是API文档，而Swagger 框架是一个用于生成、描述、调用和可视化 RESTful 风格的 Web 服务，它可以轻松的集成到spring boot中 Swagger2使用 引入依赖  &lt;dependency&gt;     &lt;groupId&gt;com.spring4all&lt;&#x2F;groupId&gt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-1.png">
-<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-2.png">
-<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-3.png">
-<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-4.png">
-<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-5.png">
-<meta property="og:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-6.png">
+<meta property="og:image" content="https://s6.jpg.cm/2022/02/14/L4ptXS.png">
+<meta property="og:image" content="https://s6.jpg.cm/2022/02/14/L4pSa2.png">
+<meta property="og:image" content="https://s6.jpg.cm/2022/02/14/L4preH.png">
+<meta property="og:image" content="https://s6.jpg.cm/2022/02/14/L4pNvW.png">
+<meta property="og:image" content="https://s6.jpg.cm/2022/02/14/L4pHZh.png">
+<meta property="og:image" content="https://s6.jpg.cm/2022/02/14/L4pssL.png">
 <meta property="article:published_time" content="2022-02-03T08:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-03T08:24:27.625Z">
+<meta property="article:modified_time" content="2022-02-14T07:49:07.521Z">
 <meta property="article:author" content="塔纳托斯">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-1.png">
-    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1644677521377">
+<meta name="twitter:image" content="https://s6.jpg.cm/2022/02/14/L4ptXS.png">
+    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1644824973527">
     
-    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1644677521377">
-    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1644677521377">
-    <link rel="stylesheet" href="/blog/css/style.css?v=1644677521377">
+    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1644824973527">
+    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1644824973527">
+    <link rel="stylesheet" href="/blog/css/style.css?v=1644824973527">
      
     
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/blog/atom.xml" title="塔纳托斯" type="application/atom+xml">
@@ -229,7 +229,7 @@
         <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">deleteUserById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-1.png"></p>
+<p><img src="https://s6.jpg.cm/2022/02/14/L4ptXS.png"></p>
 <h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>swagger提供调试接口的功能，点击具体接口后点击Try it out，若需要Parameters（参数），在输入框中输入具体参数，之后点击Execute，最后看Response body是否返回预定结果值</p>
 <h3 id="接口分组与排序"><a href="#接口分组与排序" class="headerlink" title="接口分组与排序"></a>接口分组与排序</h3><p><code>@Api</code>注解中属性tags的值为一个分组，同时tags属性是个<strong>数组</strong>类型，及可以将多个接口<strong>合并起来</strong>，对于<code>@ApiOperation</code>注解中的<code>tags</code>属性可以做到更细的接口分类</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"学生管理"</span><span class="token punctuation">,</span><span class="token string">"教学管理"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -346,7 +346,7 @@
 <ul>
 <li>先启动应用，再点击swagger2markup插件</li>
 </ul>
-<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-2.png"></p>
+<p><img src="https://s6.jpg.cm/2022/02/14/L4pSa2.png"></p>
 <ul>
 <li>将生成的AsciiDoc文档转成Html</li>
 </ul>
@@ -371,7 +371,7 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">></span></span></code></pre>
 <p>点击插件的<code>asciidoctor:process-asciidoc</code>命令</p>
-<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-3.png"></p>
+<p><img src="https://s6.jpg.cm/2022/02/14/L4preH.png"></p>
 <p>除了将AsciiDoc转成Html外，也可以将AsciiDoc转成pdf，通过修改插件的<code>&lt;backend&gt;html5&lt;/backend&gt;</code>为<code>&lt;backend&gt;pdf&lt;/backend&gt;</code></p>
 <p>后再引入<code>asciidoctorj-pdf</code>的依赖就可以了</p>
 <ul>
@@ -379,7 +379,7 @@
 </ul>
 <p>上述操作之后生成的文档有4个，是分散的，那么怎么将其合并：将swagger2markup插件中的<code>&lt;outputDir&gt;src/docs/asciidoc/generated&lt;/outputDir&gt;</code>改成<code>&lt;outputFile&gt;src/docs/asciidoc/generated/all&lt;/outputFile&gt;</code></p>
 <p>修改依赖后点击重新导入依赖，在生成文档</p>
-<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-4.png"></p>
+<p><img src="https://s6.jpg.cm/2022/02/14/L4pNvW.png"></p>
 <p>点击all.html可以看到静态文档，但默认文档是英文，可以在swagger2markup插件中添加配置</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- swagger2markup插件 --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">></span></span>
@@ -514,8 +514,8 @@
 <ul>
 <li>访问<code>http://localhost:8080/doc.html</code></li>
 </ul>
-<p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-5.png"></p>
-<h3 id="利用Knife4j生成离线文档"><a href="#利用Knife4j生成离线文档" class="headerlink" title="利用Knife4j生成离线文档"></a>利用Knife4j生成离线文档</h3><p><img src="https://cdn2.maocdn.cn/img/2022/02/03/hexo-blog-26-6.png"></p>
+<p><img src="https://s6.jpg.cm/2022/02/14/L4pHZh.png"></p>
+<h3 id="利用Knife4j生成离线文档"><a href="#利用Knife4j生成离线文档" class="headerlink" title="利用Knife4j生成离线文档"></a>利用Knife4j生成离线文档</h3><p><img src="https://s6.jpg.cm/2022/02/14/L4pssL.png"></p>
 <h3 id="Swagger3全局参数配置"><a href="#Swagger3全局参数配置" class="headerlink" title="Swagger3全局参数配置"></a>Swagger3全局参数配置</h3><p>Swagger3中增加了一些全局参数的配置，如生成全局的参数和通用的响应信息，目前水平还用不上，故先略过</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>除了Swagger外，还有更多API管理系统，如<strong>YApi</strong>、<strong>eolinker</strong>、<strong>ShowDoc</strong> 等等，具体选择需要根据团队需求出发</p>
 
@@ -578,7 +578,7 @@
 
  
 
-<script async src="/blog/js/app.js?v=1644677521401"></script>
+<script async src="/blog/js/app.js?v=1644824973550"></script>
 
 
 
