@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>图床一事</title>
+      <link href="/blog/2023/03/18/29.tu-chuang-yi-shi/"/>
+      <url>/blog/2023/03/18/29.tu-chuang-yi-shi/</url>
+      
+        <content type="html"><![CDATA[<p>过去一年沉迷于<strong>悟道</strong>，有近一年没有管理这个博客，最近，我打开博客发现，图片加载不出来，我找到了我的上传图片的两个图床网站，其中一个直接网站都没了，另一个网站虽在，我引用的图片还能访问，但此网站清空了我帐号的图片，即我帐号的图片管理中，一张图片都找不到了，惨，实惨，悔不当初，因此，我需记录，免费图床不可靠，还得要付费购买服务，因此，对于我个人来说，<strong>自建图床</strong>显得可行</p><h2 id="建立OSS服务"><a href="#建立OSS服务" class="headerlink" title="建立OSS服务"></a>建立OSS服务</h2><p><code>oss</code>，对象存储服务。许多云平台都有<code>oss</code>服务，如阿里云、腾讯云、七牛云、又拍云等等，怎么选择云平台呢？适合自己就行，我选择的是又拍云</p><h2 id="开源的图床项目"><a href="#开源的图床项目" class="headerlink" title="开源的图床项目"></a>开源的图床项目</h2><p>开源的图床管理项目有很多，如：</p><p><code>PicGo</code></p><p>官网：<a href="https://molunerfinn.com/PicGo/">https://molunerfinn.com/PicGo/</a></p><p><code>Lsky Pro</code>，兰空图床</p><p>官网：<a href="https://www.lsky.pro/">https://www.lsky.pro/</a></p><p>其他的还有：<code>PicUploader</code>、<code>Chevereto-Free</code>、<code>EasyImage 2.0</code>、<code>Lychee</code>、<code>Hellohao</code>、<code>ImgURL</code>等等</p><p>选择适合自己的即可，选择好后，按照文档操作，完成配置</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>自建图床并不复杂，对于有图床需求的，可以选择此方式</p><p>对于我原本文章的图片，我会视情况进行修复</p><p><strong>一年悟道，窥探法则，见识不同，收获不一，时间一观，虚无如梦，抵达之说，三方构成，观者观者，记录记录，缘来自成，皆为命数，妄想妄想，实现实现，人有伟力，心意之强，生时所想，死时无虑，传承万物，诉尽其想</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>springboot中的常用操作</title>
       <link href="/blog/2022/02/26/28.springboot-zhong-de-chang-yong-cao-zuo/"/>
       <url>/blog/2022/02/26/28.springboot-zhong-de-chang-yong-cao-zuo/</url>

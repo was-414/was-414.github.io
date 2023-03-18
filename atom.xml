@@ -6,7 +6,7 @@
   <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
   
   <link href="http://hai-chao.gitee.io/blog/"/>
-  <updated>2022-02-28T11:15:05.144Z</updated>
+  <updated>2023-03-18T08:10:03.008Z</updated>
   <id>http://hai-chao.gitee.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图床一事</title>
+    <link href="http://hai-chao.gitee.io/blog/2023/03/18/29.tu-chuang-yi-shi/"/>
+    <id>http://hai-chao.gitee.io/blog/2023/03/18/29.tu-chuang-yi-shi/</id>
+    <published>2023-03-18T05:51:41.000Z</published>
+    <updated>2023-03-18T08:10:03.008Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;过去一年沉迷于&lt;strong&gt;悟道&lt;/strong&gt;，有近一年没有管理这个博客，最近，我打开博客发现，图片加载不出来，我找到了我的上传图片的两个图床网站，其中一个直接网站都没了，另一个网站虽在，我引用的图片还能访问，但此网站清空了我帐号的图片，即我帐号的图片管理中，一张图片</summary>
+        
+      
+    
+    
+    
+    
+    <category term="分享" scheme="http://hai-chao.gitee.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>springboot中的常用操作</title>
@@ -462,29 +485,6 @@
     
     
     <category term="分享" scheme="http://hai-chao.gitee.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>吃瓜之lex事件整理</title>
-    <link href="http://hai-chao.gitee.io/blog/2021/02/08/11.chi-gua-zhi-lex-shi-jian-zheng-li/"/>
-    <id>http://hai-chao.gitee.io/blog/2021/02/08/11.chi-gua-zhi-lex-shi-jian-zheng-li/</id>
-    <published>2021-02-08T05:12:26.000Z</published>
-    <updated>2021-02-13T13:21:16.219Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;对于一般性质的吃瓜事件我都是秉承着&lt;strong&gt;让子弹多飞一会儿&lt;/strong&gt;的态度并且以&lt;strong&gt;观测者&lt;/strong&gt;的身份入围，但我今天吃瓜竞吃到自己待的圈子上了，作为&lt;strong&gt;动漫爱好者&lt;/strong&gt;(就一臭看动漫的)，因追番列表中有无职转生</summary>
-        
-      
-    
-    
-    
-    
-    <category term="吃瓜" scheme="http://hai-chao.gitee.io/blog/tags/%E5%90%83%E7%93%9C/"/>
     
   </entry>
   
