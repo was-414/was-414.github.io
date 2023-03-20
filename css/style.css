@@ -1114,10 +1114,8 @@ body {
 #nexmoe-content .nexmoe-posts .nexmoe-post:last-child {
   margin-bottom: 25px;
 }
-#nexmoe-content .nexmoe-post .nexmoe-post-cover:hover {
-  border: 1px solid #f00;
-}
 #nexmoe-content .nexmoe-post .nexmoe-post-cover {
+  text-align: center;
   width: 100%;
   padding-bottom: 0%;
   position: relative;
@@ -1125,6 +1123,8 @@ body {
   border-radius: 16px;
   min-height: 95px;
   background-color: #eee;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
 }
 #nexmoe-content .nexmoe-post .nexmoe-post-cover img {
   display: block;
@@ -1304,7 +1304,7 @@ body {
 .nexmoe-post-right .nexmoe-tool {
   position: absolute;
   bottom: 20px;
-  left: -50px;
+  left: -80px;
   width: 56px;
 }
 .nexmoe-post-right .nexmoe-tool button {

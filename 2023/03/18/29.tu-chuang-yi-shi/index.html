@@ -20,15 +20,15 @@
 <meta property="og:description" content="过去一年沉迷于悟道，有近一年没有管理这个博客，最近，我打开博客发现，图片加载不出来，我找到了我的上传图片的两个图床网站，其中一个直接网站都没了，另一个网站虽在，我引用的图片还能访问，但此网站清空了我帐号的图片，即我帐号的图片管理中，一张图片都找不到了，惨，实惨，悔不当初，因此，我需记录，免费图床不可靠，还得要付费购买服务，因此，对于我个人来说，自建图床显得可行 建立OSS服务oss，对象存储服务。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-18T05:51:41.000Z">
-<meta property="article:modified_time" content="2023-03-18T08:10:03.008Z">
+<meta property="article:modified_time" content="2023-03-19T01:32:04.128Z">
 <meta property="article:author" content="塔纳托斯">
 <meta property="article:tag" content="分享">
 <meta name="twitter:card" content="summary">
-    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1679127183475">
+    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1679297521013">
     
-    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1679127183475">
-    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1679127183475">
-    <link rel="stylesheet" href="/blog/css/style.css?v=1679127183475">
+    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1679297521013">
+    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1679297521013">
+    <link rel="stylesheet" href="/blog/css/style.css?v=1679297521013">
      
     
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/blog/atom.xml" title="塔纳托斯" type="application/atom+xml">
@@ -61,14 +61,7 @@
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/" title="回到首页">
-            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
-            <div class="mdui-list-item-content">
-                回到首页
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/nexmoe/archives.html" title="文章归档">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/" title="文章归档">
             <i class="mdui-list-item-icon nexmoefont icon-container"></i>
             <div class="mdui-list-item-content">
                 文章归档
@@ -103,7 +96,7 @@
   <article>
       
           <div class="nexmoe-post-cover"> 
-              <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="图床一事" class="lazyload">
+              
               <h1>图床一事</h1>
           </div>
       
@@ -123,6 +116,8 @@
 <p>官网：<a target="_blank" rel="noopener" href="https://www.lsky.pro/">https://www.lsky.pro/</a></p>
 <p>其他的还有：<code>PicUploader</code>、<code>Chevereto-Free</code>、<code>EasyImage 2.0</code>、<code>Lychee</code>、<code>Hellohao</code>、<code>ImgURL</code>等等</p>
 <p>选择适合自己的即可，选择好后，按照文档操作，完成配置</p>
+<h2 id="我的方案"><a href="#我的方案" class="headerlink" title="我的方案"></a>我的方案</h2><p>我选择的是<code>PicGo</code>，使用后发现有些不太符合我的需求，如删除图床管理中的图片，云端不会同步删除，显得有些不方便</p>
+<p>在查询一番后，我找到了插件列表中的<code>PicList</code>，该项目是基于<code>PicGo</code>的二次开发版本，增加了<strong>云存储管理</strong>和<strong>相册云端同步删除</strong>的功能，这十分符合我的需求，同时自带有<strong>图片压缩</strong>的功能，质量比例我测试了一下，发现50就差不多</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>自建图床并不复杂，对于有图床需求的，可以选择此方式</p>
 <p>对于我原本文章的图片，我会视情况进行修复</p>
 <p><strong>一年悟道，窥探法则，见识不同，收获不一，时间一观，虚无如梦，抵达之说，三方构成，观者观者，记录记录，缘来自成，皆为命数，妄想妄想，实现实现，人有伟力，心意之强，生时所想，死时无虑，传承万物，诉尽其想</strong></p>
@@ -166,7 +161,7 @@
                               <button class="mdui-fab catalog" style="overflow:unset;">
                                   <i class="nexmoefont icon-i-catalog"></i>
                                   <div class="nexmoe-toc">
-                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8BOSS%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">建立OSS服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E7%9A%84%E5%9B%BE%E5%BA%8A%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">开源的图床项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">3.</span> <span class="toc-text">结语</span></a></li></ol>
+                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8BOSS%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">建立OSS服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E7%9A%84%E5%9B%BE%E5%BA%8A%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">开源的图床项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">我的方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol>
                                   </div>
                               </button>
                           
@@ -186,7 +181,7 @@
 
  
 
-<script async src="/blog/js/app.js?v=1679127183479"></script>
+<script async src="/blog/js/app.js?v=1679297521017"></script>
 
 
 
