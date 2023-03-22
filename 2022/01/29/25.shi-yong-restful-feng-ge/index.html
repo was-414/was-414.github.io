@@ -15,7 +15,7 @@
     <meta name="description" content="REST，Representational State Transfer，表现层状态转化。 REST介绍REST是一种软件架构风格，是一种设计风格，不是一种必须的标准 其具有的特点：  以资源为基础  资源可以是对象数据，及一种资源可以是一个单体对象，一个集合，通常用JSON当作载体；同时资源也可以是二进制数据，及一种资源可以是图片、视频、音乐等等。概括总结的话，资源就是网络上的实体对象  统一接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用RESTful风格">
-<meta property="og:url" content="http://was-414.github.io/2022/01/29/25.shi-yong-restful-feng-ge/index.html">
+<meta property="og:url" content="https://was-414.github.io/2022/01/29/25.shi-yong-restful-feng-ge/index.html">
 <meta property="og:site_name" content="塔纳托斯">
 <meta property="og:description" content="REST，Representational State Transfer，表现层状态转化。 REST介绍REST是一种软件架构风格，是一种设计风格，不是一种必须的标准 其具有的特点：  以资源为基础  资源可以是对象数据，及一种资源可以是一个单体对象，一个集合，通常用JSON当作载体；同时资源也可以是二进制数据，及一种资源可以是图片、视频、音乐等等。概括总结的话，资源就是网络上的实体对象  统一接">
 <meta property="og:locale" content="zh_CN">
@@ -24,15 +24,15 @@
 <meta property="article:author" content="塔纳托斯">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
-    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1679448057120">
+    <link rel="stylesheet" href="/lib/jquery.fancybox.min.css?v=1679450270439">
     
-    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1679448057120">
-    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1679448057120">
-    <link rel="stylesheet" href="/blog/css/style.css?v=1679448057120">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1679450270439">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1679450270439">
+    <link rel="stylesheet" href="/css/style.css?v=1679450270439">
      
     
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/blog/atom.xml" title="塔纳托斯" type="application/atom+xml">
-<link rel="stylesheet" href="/blog/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="塔纳托斯" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body class="mdui-drawer-body-left">
     
@@ -43,14 +43,14 @@
                 <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
                 <div class="mdui-toolbar-spacer"></div>
                 <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-                <a href="/blog/" title="塔纳托斯" class="mdui-btn mdui-btn-icon"><img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯"></a>
+                <a href="/" title="塔纳托斯" class="mdui-btn mdui-btn-icon"><img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯"></a>
             </div>
         </div>
     </div>
     <div id="nexmoe-header">
         <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
-        <a href="/blog/" title="塔纳托斯">
+        <a href="/" title="塔纳托斯">
             <img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯" alt="塔纳托斯">
         </a>
     </div>
@@ -61,7 +61,7 @@
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/" title="文章归档">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="文章归档">
             <i class="mdui-list-item-icon nexmoefont icon-container"></i>
             <div class="mdui-list-item-content">
                 文章归档
@@ -74,7 +74,7 @@
     
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/blog/tags/java/" style="font-size: 10px;">java</a> <a href="/blog/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/blog/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">学习</a> <a href="/blog/tags/%E6%80%BB%E7%BB%93/" style="font-size: 13.33px;">总结</a> <a href="/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a>
+      <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">学习</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 13.33px;">总结</a> <a href="/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a>
     </div>
     
   </div>
@@ -395,7 +395,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>塔纳托斯<br>
-        <strong>本文链接：</strong><a href="http://was-414.github.io/2022/01/29/25.shi-yong-restful-feng-ge/" title="http:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;29&#x2F;25.shi-yong-restful-feng-ge&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;29&#x2F;25.shi-yong-restful-feng-ge&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="https://was-414.github.io/2022/01/29/25.shi-yong-restful-feng-ge/" title="https:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;29&#x2F;25.shi-yong-restful-feng-ge&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;29&#x2F;25.shi-yong-restful-feng-ge&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -407,7 +407,7 @@
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
     
-        <a class="nexmoefont icon-tag-fill -none-link" href="/blog/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>
     
 </div>
 
@@ -448,7 +448,7 @@
 
  
 
-<script async src="/blog/js/app.js?v=1679448057123"></script>
+<script async src="/js/app.js?v=1679450270442"></script>
 
 
 

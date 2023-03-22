@@ -15,7 +15,7 @@
     <meta name="description" content="RBAC，Role-Based Access Control，基于角色的访问控制 RBAC模型的核心是在用户和权限之间引入了角色的概念，取消了用户和权限的直接关联，改为通过用户关联角色、角色关联权限的方法来间接地赋予用户权限，从而达到用户和权限解耦的目的 本次练习粗略的实现基于RBAC的简单权限系统 表设计总共5张表，分别为user，role，user_role，permission，role_p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="练习之RBAC简单权限">
-<meta property="og:url" content="http://was-414.github.io/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/index.html">
+<meta property="og:url" content="https://was-414.github.io/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/index.html">
 <meta property="og:site_name" content="塔纳托斯">
 <meta property="og:description" content="RBAC，Role-Based Access Control，基于角色的访问控制 RBAC模型的核心是在用户和权限之间引入了角色的概念，取消了用户和权限的直接关联，改为通过用户关联角色、角色关联权限的方法来间接地赋予用户权限，从而达到用户和权限解耦的目的 本次练习粗略的实现基于RBAC的简单权限系统 表设计总共5张表，分别为user，role，user_role，permission，role_p">
 <meta property="og:locale" content="zh_CN">
@@ -24,15 +24,15 @@
 <meta property="article:author" content="塔纳托斯">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
-    <link rel="stylesheet" href="/blog/lib/jquery.fancybox.min.css?v=1679448057125">
+    <link rel="stylesheet" href="/lib/jquery.fancybox.min.css?v=1679450270446">
     
-    <link rel="stylesheet" href="/blog/lib/mdui_043tiny/css/mdui.css?v=1679448057125">
-    <link rel="stylesheet" href="/blog/lib/iconfont/iconfont.css?v=1679448057125">
-    <link rel="stylesheet" href="/blog/css/style.css?v=1679448057125">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1679450270446">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1679450270446">
+    <link rel="stylesheet" href="/css/style.css?v=1679450270446">
      
     
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/blog/atom.xml" title="塔纳托斯" type="application/atom+xml">
-<link rel="stylesheet" href="/blog/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="塔纳托斯" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body class="mdui-drawer-body-left">
     
@@ -43,14 +43,14 @@
                 <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
                 <div class="mdui-toolbar-spacer"></div>
                 <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-                <a href="/blog/" title="塔纳托斯" class="mdui-btn mdui-btn-icon"><img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯"></a>
+                <a href="/" title="塔纳托斯" class="mdui-btn mdui-btn-icon"><img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯"></a>
             </div>
         </div>
     </div>
     <div id="nexmoe-header">
         <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
-        <a href="/blog/" title="塔纳托斯">
+        <a href="/" title="塔纳托斯">
             <img src="https://s6.jpg.cm/2022/01/17/LFpniO.md.jpg" alt="塔纳托斯" alt="塔纳托斯">
         </a>
     </div>
@@ -61,7 +61,7 @@
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/blog/" title="文章归档">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="文章归档">
             <i class="mdui-list-item-icon nexmoefont icon-container"></i>
             <div class="mdui-list-item-content">
                 文章归档
@@ -74,7 +74,7 @@
     
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/blog/tags/java/" style="font-size: 10px;">java</a> <a href="/blog/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/blog/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/blog/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">学习</a> <a href="/blog/tags/%E6%80%BB%E7%BB%93/" style="font-size: 13.33px;">总结</a> <a href="/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a>
+      <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">学习</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 13.33px;">总结</a> <a href="/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a>
     </div>
     
   </div>
@@ -497,7 +497,7 @@
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>塔纳托斯<br>
-        <strong>本文链接：</strong><a href="http://was-414.github.io/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/" title="http:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;15&#x2F;24.lian-xi-zhi-rbac-jian-dan-quan-xian&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;15&#x2F;24.lian-xi-zhi-rbac-jian-dan-quan-xian&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="https://was-414.github.io/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/" title="https:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;15&#x2F;24.lian-xi-zhi-rbac-jian-dan-quan-xian&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;01&#x2F;15&#x2F;24.lian-xi-zhi-rbac-jian-dan-quan-xian&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -509,7 +509,7 @@
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
     
-        <a class="nexmoefont icon-tag-fill -none-link" href="/blog/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>
     
 </div>
 
@@ -550,7 +550,7 @@
 
  
 
-<script async src="/blog/js/app.js?v=1679448057131"></script>
+<script async src="/js/app.js?v=1679450270455"></script>
 
 
 
