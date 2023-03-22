@@ -3,11 +3,11 @@
   <title>塔纳托斯</title>
   
   <subtitle>塔纳托斯</subtitle>
-  <link href="http://was-414.github.io/blog/atom.xml" rel="self"/>
+  <link href="http://hai-chao.gitee.io/blog/atom.xml" rel="self"/>
   
-  <link href="http://was-414.github.io/blog/"/>
+  <link href="http://hai-chao.gitee.io/blog/"/>
   <updated>2023-03-19T01:32:04.128Z</updated>
-  <id>http://was-414.github.io/blog/</id>
+  <id>http://hai-chao.gitee.io/blog/</id>
   
   <author>
     <name>塔纳托斯</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>图床一事</title>
-    <link href="http://was-414.github.io/blog/2023/03/18/29.tu-chuang-yi-shi/"/>
-    <id>http://was-414.github.io/blog/2023/03/18/29.tu-chuang-yi-shi/</id>
+    <link href="http://hai-chao.gitee.io/blog/2023/03/18/29.tu-chuang-yi-shi/"/>
+    <id>http://hai-chao.gitee.io/blog/2023/03/18/29.tu-chuang-yi-shi/</id>
     <published>2023-03-18T05:51:41.000Z</published>
     <updated>2023-03-19T01:32:04.128Z</updated>
     
@@ -35,14 +35,14 @@
     
     
     
-    <category term="分享" scheme="http://was-414.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="http://hai-chao.gitee.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>springboot中的常用操作</title>
-    <link href="http://was-414.github.io/blog/2022/02/26/28.springboot-zhong-de-chang-yong-cao-zuo/"/>
-    <id>http://was-414.github.io/blog/2022/02/26/28.springboot-zhong-de-chang-yong-cao-zuo/</id>
+    <link href="http://hai-chao.gitee.io/blog/2022/02/26/28.springboot-zhong-de-chang-yong-cao-zuo/"/>
+    <id>http://hai-chao.gitee.io/blog/2022/02/26/28.springboot-zhong-de-chang-yong-cao-zuo/</id>
     <published>2022-02-26T06:44:44.000Z</published>
     <updated>2022-02-28T11:15:05.144Z</updated>
     
@@ -59,14 +59,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>springboot集成安全框架</title>
-    <link href="http://was-414.github.io/blog/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/"/>
-    <id>http://was-414.github.io/blog/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/</id>
+    <link href="http://hai-chao.gitee.io/blog/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/"/>
+    <id>http://hai-chao.gitee.io/blog/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/</id>
     <published>2022-02-12T11:00:00.000Z</published>
     <updated>2022-02-12T14:51:24.835Z</updated>
     
@@ -83,14 +83,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>springboot集成swagger</title>
-    <link href="http://was-414.github.io/blog/2022/02/03/26.springboot-ji-cheng-swagger/"/>
-    <id>http://was-414.github.io/blog/2022/02/03/26.springboot-ji-cheng-swagger/</id>
+    <link href="http://hai-chao.gitee.io/blog/2022/02/03/26.springboot-ji-cheng-swagger/"/>
+    <id>http://hai-chao.gitee.io/blog/2022/02/03/26.springboot-ji-cheng-swagger/</id>
     <published>2022-02-03T08:00:00.000Z</published>
     <updated>2022-02-20T00:33:43.549Z</updated>
     
@@ -106,14 +106,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>使用RESTful风格</title>
-    <link href="http://was-414.github.io/blog/2022/01/29/25.shi-yong-restful-feng-ge/"/>
-    <id>http://was-414.github.io/blog/2022/01/29/25.shi-yong-restful-feng-ge/</id>
+    <link href="http://hai-chao.gitee.io/blog/2022/01/29/25.shi-yong-restful-feng-ge/"/>
+    <id>http://hai-chao.gitee.io/blog/2022/01/29/25.shi-yong-restful-feng-ge/</id>
     <published>2022-01-29T08:00:00.000Z</published>
     <updated>2022-01-30T03:25:19.389Z</updated>
     
@@ -130,14 +130,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>练习之RBAC简单权限</title>
-    <link href="http://was-414.github.io/blog/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/"/>
-    <id>http://was-414.github.io/blog/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/</id>
+    <link href="http://hai-chao.gitee.io/blog/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/"/>
+    <id>http://hai-chao.gitee.io/blog/2022/01/15/24.lian-xi-zhi-rbac-jian-dan-quan-xian/</id>
     <published>2022-01-15T10:00:00.000Z</published>
     <updated>2022-01-16T08:11:17.841Z</updated>
     
@@ -153,14 +153,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>使用js发送网络请求</title>
-    <link href="http://was-414.github.io/blog/2022/01/11/23.shi-yong-js-fa-song-wang-luo-qing-qiu/"/>
-    <id>http://was-414.github.io/blog/2022/01/11/23.shi-yong-js-fa-song-wang-luo-qing-qiu/</id>
+    <link href="http://hai-chao.gitee.io/blog/2022/01/11/23.shi-yong-js-fa-song-wang-luo-qing-qiu/"/>
+    <id>http://hai-chao.gitee.io/blog/2022/01/11/23.shi-yong-js-fa-song-wang-luo-qing-qiu/</id>
     <published>2022-01-11T03:11:00.000Z</published>
     <updated>2022-01-11T03:16:08.634Z</updated>
     
@@ -176,14 +176,14 @@
     
     
     
-    <category term="总结" scheme="http://was-414.github.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>初次使用spring boot</title>
-    <link href="http://was-414.github.io/blog/2021/12/20/22.chu-ci-shi-yong-spring-boot/"/>
-    <id>http://was-414.github.io/blog/2021/12/20/22.chu-ci-shi-yong-spring-boot/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/12/20/22.chu-ci-shi-yong-spring-boot/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/12/20/22.chu-ci-shi-yong-spring-boot/</id>
     <published>2021-12-20T12:00:00.000Z</published>
     <updated>2021-12-20T08:50:48.029Z</updated>
     
@@ -200,14 +200,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>wex5简单练习</title>
-    <link href="http://was-414.github.io/blog/2021/12/17/21.wex5-jian-dan-lian-xi/"/>
-    <id>http://was-414.github.io/blog/2021/12/17/21.wex5-jian-dan-lian-xi/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/12/17/21.wex5-jian-dan-lian-xi/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/12/17/21.wex5-jian-dan-lian-xi/</id>
     <published>2021-12-17T08:00:00.000Z</published>
     <updated>2021-12-17T09:09:40.388Z</updated>
     
@@ -224,14 +224,14 @@
     
     
     
-    <category term="总结" scheme="http://was-414.github.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>linux期末指南</title>
-    <link href="http://was-414.github.io/blog/2021/07/03/20.linux-qi-mo-zhi-nan/"/>
-    <id>http://was-414.github.io/blog/2021/07/03/20.linux-qi-mo-zhi-nan/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/07/03/20.linux-qi-mo-zhi-nan/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/07/03/20.linux-qi-mo-zhi-nan/</id>
     <published>2021-07-03T09:19:03.000Z</published>
     <updated>2021-07-07T05:52:06.885Z</updated>
     
@@ -247,14 +247,14 @@
     
     
     
-    <category term="总结" scheme="http://was-414.github.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>图像期末指南</title>
-    <link href="http://was-414.github.io/blog/2021/06/26/19.tu-xiang-qi-mo-zhi-nan/"/>
-    <id>http://was-414.github.io/blog/2021/06/26/19.tu-xiang-qi-mo-zhi-nan/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/06/26/19.tu-xiang-qi-mo-zhi-nan/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/06/26/19.tu-xiang-qi-mo-zhi-nan/</id>
     <published>2021-06-26T08:48:07.000Z</published>
     <updated>2021-06-26T14:17:55.311Z</updated>
     
@@ -270,14 +270,14 @@
     
     
     
-    <category term="总结" scheme="http://was-414.github.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>90后性生活图鉴</title>
-    <link href="http://was-414.github.io/blog/2021/05/25/18.90-hou-xing-sheng-huo-tu-jian/"/>
-    <id>http://was-414.github.io/blog/2021/05/25/18.90-hou-xing-sheng-huo-tu-jian/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/05/25/18.90-hou-xing-sheng-huo-tu-jian/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/05/25/18.90-hou-xing-sheng-huo-tu-jian/</id>
     <published>2021-05-25T13:21:02.000Z</published>
     <updated>2021-05-25T13:42:40.669Z</updated>
     
@@ -294,14 +294,14 @@
     
     
     
-    <category term="分享" scheme="http://was-414.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="http://hai-chao.gitee.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>跌倒的危害</title>
-    <link href="http://was-414.github.io/blog/2021/05/22/17.die-dao-de-wei-hai/"/>
-    <id>http://was-414.github.io/blog/2021/05/22/17.die-dao-de-wei-hai/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/05/22/17.die-dao-de-wei-hai/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/05/22/17.die-dao-de-wei-hai/</id>
     <published>2021-05-22T10:31:32.000Z</published>
     <updated>2023-03-19T02:26:45.710Z</updated>
     
@@ -318,14 +318,14 @@
     
     
     
-    <category term="分享" scheme="http://was-414.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="http://hai-chao.gitee.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>USB科普</title>
-    <link href="http://was-414.github.io/blog/2021/04/24/16.usb-ke-pu/"/>
-    <id>http://was-414.github.io/blog/2021/04/24/16.usb-ke-pu/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/04/24/16.usb-ke-pu/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/04/24/16.usb-ke-pu/</id>
     <published>2021-04-24T12:48:30.000Z</published>
     <updated>2023-03-19T02:21:32.467Z</updated>
     
@@ -341,14 +341,14 @@
     
     
     
-    <category term="分享" scheme="http://was-414.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="http://hai-chao.gitee.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>21Y3近况总结</title>
-    <link href="http://was-414.github.io/blog/2021/03/28/15.21y3-jin-kuang-zong-jie/"/>
-    <id>http://was-414.github.io/blog/2021/03/28/15.21y3-jin-kuang-zong-jie/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/03/28/15.21y3-jin-kuang-zong-jie/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/03/28/15.21y3-jin-kuang-zong-jie/</id>
     <published>2021-03-28T02:29:04.000Z</published>
     <updated>2021-03-28T03:18:00.412Z</updated>
     
@@ -364,14 +364,14 @@
     
     
     
-    <category term="总结" scheme="http://was-414.github.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>扣图指南</title>
-    <link href="http://was-414.github.io/blog/2021/03/14/14.kou-tu-zhi-nan/"/>
-    <id>http://was-414.github.io/blog/2021/03/14/14.kou-tu-zhi-nan/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/03/14/14.kou-tu-zhi-nan/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/03/14/14.kou-tu-zhi-nan/</id>
     <published>2021-03-14T09:56:55.000Z</published>
     <updated>2023-03-19T02:19:18.939Z</updated>
     
@@ -388,14 +388,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Mysql自学笔记</title>
-    <link href="http://was-414.github.io/blog/2021/03/08/9.mysql-zi-xue-bi-ji/"/>
-    <id>http://was-414.github.io/blog/2021/03/08/9.mysql-zi-xue-bi-ji/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/03/08/9.mysql-zi-xue-bi-ji/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/03/08/9.mysql-zi-xue-bi-ji/</id>
     <published>2021-03-08T14:45:02.000Z</published>
     <updated>2021-03-15T13:57:17.484Z</updated>
     
@@ -411,14 +411,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>21Y1-2游戏总结</title>
-    <link href="http://was-414.github.io/blog/2021/02/28/13.21y1-2-you-xi-zong-jie/"/>
-    <id>http://was-414.github.io/blog/2021/02/28/13.21y1-2-you-xi-zong-jie/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/02/28/13.21y1-2-you-xi-zong-jie/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/02/28/13.21y1-2-you-xi-zong-jie/</id>
     <published>2021-02-28T07:20:00.000Z</published>
     <updated>2023-03-19T02:15:04.192Z</updated>
     
@@ -435,16 +435,16 @@
     
     
     
-    <category term="游后感" scheme="http://was-414.github.io/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/"/>
+    <category term="游后感" scheme="http://hai-chao.gitee.io/blog/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/"/>
     
-    <category term="总结" scheme="http://was-414.github.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="http://hai-chao.gitee.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>快速排序</title>
-    <link href="http://was-414.github.io/blog/2021/02/19/10.kuai-su-pai-xu/"/>
-    <id>http://was-414.github.io/blog/2021/02/19/10.kuai-su-pai-xu/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/02/19/10.kuai-su-pai-xu/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/02/19/10.kuai-su-pai-xu/</id>
     <published>2021-02-19T03:45:02.000Z</published>
     <updated>2021-02-19T11:04:40.009Z</updated>
     
@@ -460,14 +460,14 @@
     
     
     
-    <category term="学习" scheme="http://was-414.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="http://hai-chao.gitee.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>对于微信公众号的研究(后日谈)</title>
-    <link href="http://was-414.github.io/blog/2021/02/13/12.dui-yu-wei-xin-gong-zhong-hao-de-yan-jiu-hou-ri-tan/"/>
-    <id>http://was-414.github.io/blog/2021/02/13/12.dui-yu-wei-xin-gong-zhong-hao-de-yan-jiu-hou-ri-tan/</id>
+    <link href="http://hai-chao.gitee.io/blog/2021/02/13/12.dui-yu-wei-xin-gong-zhong-hao-de-yan-jiu-hou-ri-tan/"/>
+    <id>http://hai-chao.gitee.io/blog/2021/02/13/12.dui-yu-wei-xin-gong-zhong-hao-de-yan-jiu-hou-ri-tan/</id>
     <published>2021-02-13T11:57:14.000Z</published>
     <updated>2023-03-19T02:17:01.770Z</updated>
     
@@ -484,7 +484,7 @@
     
     
     
-    <category term="分享" scheme="http://was-414.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="http://hai-chao.gitee.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
