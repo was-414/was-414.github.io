@@ -15,7 +15,7 @@
     <meta name="description" content="在java领域中有Spring Security和Apache Shiro等安全框架，本次记录中使用springboot来集成这两个框架 shiroshiro比spring security更轻量，功能更简单些 能干啥  Authentication：认证 Authorization：授权 Session Management：会话管理；特定于用户的会话管理，及shiro自带的session Cr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springboot集成安全框架">
-<meta property="og:url" content="http://was-414.github.io/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/index.html">
+<meta property="og:url" content="https://was-414.github.io/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/index.html">
 <meta property="og:site_name" content="塔纳托斯">
 <meta property="og:description" content="在java领域中有Spring Security和Apache Shiro等安全框架，本次记录中使用springboot来集成这两个框架 shiroshiro比spring security更轻量，功能更简单些 能干啥  Authentication：认证 Authorization：授权 Session Management：会话管理；特定于用户的会话管理，及shiro自带的session Cr">
 <meta property="og:locale" content="zh_CN">
@@ -38,11 +38,11 @@
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://shiro.apache.org/images/ShiroFeatures.png">
-    <link rel="stylesheet" href="/lib/jquery.fancybox.min.css?v=1679454574758">
+    <link rel="stylesheet" href="/lib/jquery.fancybox.min.css?v=1685606206383">
     
-    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1679454574758">
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1679454574758">
-    <link rel="stylesheet" href="/css/style.css?v=1679454574758">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1685606206383">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685606206383">
+    <link rel="stylesheet" href="/css/style.css?v=1685606206383">
      
     
 <meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="塔纳托斯" type="application/atom+xml">
@@ -69,8 +69,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>29</div>
-        <div><span>标签</span>6</div>
+        <div><span>文章</span>30</div>
+        <div><span>标签</span>7</div>
         <div><span>分类</span>0</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -88,7 +88,7 @@
     
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">学习</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 13.33px;">总结</a> <a href="/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a>
+      <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%90%83%E7%93%9C/" style="font-size: 10px;">吃瓜</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">学习</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 13.33px;">总结</a> <a href="/tags/%E6%B8%B8%E5%90%8E%E6%84%9F/" style="font-size: 10px;">游后感</a> <a href="/tags/%E8%A7%82%E5%BD%95/" style="font-size: 10px;">观录</a>
     </div>
     
   </div>
@@ -1187,7 +1187,7 @@ RoleHierarchy <span class="token function">roleHierarchy</span><span class="toke
       
     <div class="nexmoe-post-copyright">
         <strong>本文作者：</strong>塔纳托斯<br>
-        <strong>本文链接：</strong><a href="http://was-414.github.io/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/" title="http:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;02&#x2F;12&#x2F;27.springboot-ji-cheng-an-quan-kuang-jia&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;02&#x2F;12&#x2F;27.springboot-ji-cheng-an-quan-kuang-jia&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="https://was-414.github.io/2022/02/12/27.springboot-ji-cheng-an-quan-kuang-jia/" title="https:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;02&#x2F;12&#x2F;27.springboot-ji-cheng-an-quan-kuang-jia&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;was-414.github.io&#x2F;2022&#x2F;02&#x2F;12&#x2F;27.springboot-ji-cheng-an-quan-kuang-jia&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -1240,7 +1240,7 @@ RoleHierarchy <span class="token function">roleHierarchy</span><span class="toke
 
  
 
-<script async src="/js/app.js?v=1679454574783"></script>
+<script async src="/js/app.js?v=1685606206420"></script>
 
 
 
